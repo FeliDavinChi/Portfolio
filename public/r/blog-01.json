@@ -1,0 +1,34 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "blog-01",
+  "title": "Blog 01",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "A blog section with a grid layout.",
+  "dependencies": [
+    "date-fns"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/blog-01/blog-01.tsx",
+      "content": "import { ArrowRightIcon } from \"lucide-react\"\r\n\r\nimport { Button } from \"@/components/ui/button\"\r\nimport { ArticleItem } from \"@/registry/blocks/blog-01/components/article-item\"\r\n\r\nexport default function Blog01() {\r\n  return (\r\n    <div className=\"container mx-auto flex flex-col gap-8 px-4 py-8\">\r\n      <h2 className=\"ml-4 font-heading text-4xl font-medium tracking-tight md:text-5xl\">\r\n        Blog\r\n      </h2>\r\n\r\n      <div className=\"grid gap-4 md:grid-cols-2 lg:grid-cols-3\">\r\n        {articles.map((article) => (\r\n          <a key={article.id} className=\"block h-full\" href=\"#\">\r\n            <ArticleItem\r\n              title={article.title}\r\n              coverUrl={article.coverUrl}\r\n              createdAt={article.createdAt}\r\n            />\r\n          </a>\r\n        ))}\r\n      </div>\r\n\r\n      <div className=\"flex justify-center\">\r\n        <Button className=\"gap-2 pr-2.5 pl-3\" asChild>\r\n          <a href=\"#\">\r\n            View All\r\n            <ArrowRightIcon />\r\n          </a>\r\n        </Button>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\ntype Article = {\r\n  id: string\r\n  title: string\r\n  coverUrl: string\r\n  createdAt: string\r\n}\r\n\r\nconst articles: Article[] = [\r\n  {\r\n    id: \"1\",\r\n    title:\r\n      \"Apple unveils iPhone 17 Pro: Aluminum frame returns, new colors, upgraded camera\",\r\n    coverUrl:\r\n      \"https://assets.chanhdai.com/registry/images/blocks/blog-01/1.webp\",\r\n    createdAt: \"2025-09-13\",\r\n  },\r\n  {\r\n    id: \"2\",\r\n    title:\r\n      'While the world is expecting AGI, François Chollet is showing just how \"naive\" AI can be',\r\n    coverUrl:\r\n      \"https://assets.chanhdai.com/registry/images/blocks/blog-01/2.webp\",\r\n    createdAt: \"2025-04-21\",\r\n  },\r\n  {\r\n    id: \"3\",\r\n    title:\r\n      \"Apple introduces iPhone 16e: A powerful new model for the iPhone 16 lineup\",\r\n    coverUrl:\r\n      \"https://assets.chanhdai.com/registry/images/blocks/blog-01/3.webp\",\r\n    createdAt: \"2025-02-20\",\r\n  },\r\n  {\r\n    id: \"4\",\r\n    title:\r\n      \"Apple unveils MacBook Pro M4: Same design, base model now with 16GB RAM, priced from $1,599\",\r\n    coverUrl:\r\n      \"https://assets.chanhdai.com/registry/images/blocks/blog-01/4.webp\",\r\n    createdAt: \"2024-10-31\",\r\n  },\r\n  {\r\n    id: \"5\",\r\n    title:\r\n      \"Apple unveils new Mac mini M4: Smaller, 16GB RAM on the base model, priced from $599\",\r\n    coverUrl:\r\n      \"https://assets.chanhdai.com/registry/images/blocks/blog-01/5.webp\",\r\n    createdAt: \"2024-10-31\",\r\n  },\r\n  {\r\n    id: \"6\",\r\n    title:\r\n      \"Apple unveils iMac M4: Unchanged design, more powerful M4 chip, RAM starts at 16GB, priced from $1,299\",\r\n    coverUrl:\r\n      \"https://assets.chanhdai.com/registry/images/blocks/blog-01/6.webp\",\r\n    createdAt: \"2024-10-29\",\r\n  },\r\n]\r\n",
+      "type": "registry:component",
+      "target": "@components/blog-01.tsx"
+    },
+    {
+      "path": "src/registry/blocks/blog-01/components/article-item.tsx",
+      "content": "import { format } from \"date-fns\"\r\n\r\nexport type ArticleItemProps = {\r\n  title: string\r\n  coverUrl: string\r\n  createdAt: string\r\n}\r\n\r\nexport function ArticleItem({ title, coverUrl, createdAt }: ArticleItemProps) {\r\n  return (\r\n    <article className=\"h-full rounded-2xl bg-card text-card-foreground shadow-xs ring-1 ring-foreground/10 dark:ring-border\">\r\n      <div className=\"p-1 pb-0\">\r\n        <div className=\"relative aspect-video\">\r\n          <img\r\n            className=\"size-full rounded-xl object-cover\"\r\n            src={coverUrl}\r\n            alt={title}\r\n          />\r\n          <div className=\"pointer-events-none absolute inset-0 rounded-xl inset-ring-1 inset-ring-black/10 dark:inset-ring-white/15\" />\r\n        </div>\r\n      </div>\r\n\r\n      <div className=\"flex flex-col gap-2 px-4 pt-4 pb-6\">\r\n        <time\r\n          className=\"block text-sm text-muted-foreground\"\r\n          dateTime={new Date(createdAt).toISOString()}\r\n        >\r\n          {format(new Date(createdAt), \"MMMM d, yyyy\")}\r\n        </time>\r\n\r\n        <h3 className=\"text-lg leading-tight font-medium text-balance\">\r\n          {title}\r\n        </h3>\r\n      </div>\r\n    </article>\r\n  )\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/article-item.tsx"
+    }
+  ],
+  "meta": {
+    "createdAt": "2026-03-13"
+  },
+  "categories": [
+    "marketing"
+  ],
+  "type": "registry:block"
+}

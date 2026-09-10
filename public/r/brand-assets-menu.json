@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "brand-assets-menu",
+  "title": "Brand Assets Menu",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Context menu for copying brand SVGs and opening asset links.",
+  "dependencies": [
+    "@rexa-developer/tiks"
+  ],
+  "registryDependencies": [
+    "context-menu",
+    "sonner"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/brand-assets-menu/brand-assets-menu.tsx",
+      "content": "\"use client\"\r\n\r\nimport { useTiks } from \"@rexa-developer/tiks/react\"\r\nimport { toast } from \"sonner\"\r\n\r\nimport {\r\n  ContextMenu,\r\n  ContextMenuContent,\r\n  ContextMenuItem,\r\n  ContextMenuSeparator,\r\n  ContextMenuTrigger,\r\n} from \"@/components/ui/context-menu\"\r\nimport { IconPlaceholder } from \"@/registry/icons/icon-placeholder\"\r\n\r\nexport type BrandAssetsMenuProps = {\r\n  logomark: React.ReactElement\r\n  logomarkSVG: string\r\n  logotypeSVG: string\r\n  brandGuidelinesURL: string\r\n  brandAssetsURL: string\r\n  children: React.ReactElement\r\n}\r\n\r\nexport function BrandAssetsMenu({\r\n  logomark,\r\n  logomarkSVG,\r\n  logotypeSVG,\r\n  brandGuidelinesURL,\r\n  brandAssetsURL,\r\n  children,\r\n}: BrandAssetsMenuProps) {\r\n  const { success } = useTiks()\r\n\r\n  return (\r\n    <ContextMenu>\r\n      <ContextMenuTrigger asChild>{children}</ContextMenuTrigger>\r\n\r\n      <ContextMenuContent className=\"w-fit\">\r\n        <ContextMenuItem\r\n          onClick={() => {\r\n            copyText(logomarkSVG)\r\n            toast.success(\"Logomark as SVG copied\")\r\n            success()\r\n          }}\r\n        >\r\n          {logomark}\r\n          Copy Logomark as SVG\r\n        </ContextMenuItem>\r\n\r\n        <ContextMenuItem\r\n          onClick={() => {\r\n            copyText(logotypeSVG)\r\n            toast.success(\"Logotype as SVG copied\")\r\n            success()\r\n          }}\r\n        >\r\n          <IconPlaceholder\r\n            lucide=\"TypeIcon\"\r\n            tabler=\"IconLetterT\"\r\n            hugeicons=\"TextIcon\"\r\n            phosphor=\"TextTIcon\"\r\n            remixicon=\"RiText\"\r\n          />\r\n          Copy Logotype as SVG\r\n        </ContextMenuItem>\r\n\r\n        <ContextMenuSeparator />\r\n\r\n        <ContextMenuItem asChild>\r\n          <a\r\n            href={brandGuidelinesURL}\r\n            target=\"_blank\"\r\n            rel=\"noopener noreferrer\"\r\n          >\r\n            <IconPlaceholder\r\n              lucide=\"SquareDashedIcon\"\r\n              tabler=\"IconShape\"\r\n              hugeicons=\"DashedLine02Icon\"\r\n              phosphor=\"BoundingBoxIcon\"\r\n              remixicon=\"RiShapeLine\"\r\n            />\r\n            Brand Guidelines\r\n          </a>\r\n        </ContextMenuItem>\r\n\r\n        <ContextMenuItem asChild>\r\n          <a\r\n            href={brandAssetsURL}\r\n            target=\"_blank\"\r\n            rel=\"noopener noreferrer\"\r\n            download\r\n          >\r\n            <IconPlaceholder\r\n              lucide=\"DownloadIcon\"\r\n              tabler=\"IconDownload\"\r\n              hugeicons=\"Download01Icon\"\r\n              phosphor=\"DownloadSimpleIcon\"\r\n              remixicon=\"RiDownloadLine\"\r\n            />\r\n            Download Brand Assets\r\n          </a>\r\n        </ContextMenuItem>\r\n      </ContextMenuContent>\r\n    </ContextMenu>\r\n  )\r\n}\r\n\r\nconst copyText = async (text: string) => {\r\n  try {\r\n    await navigator.clipboard.writeText(text)\r\n    return true\r\n  } catch {\r\n    return false\r\n  }\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/brand-assets-menu.tsx"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/brand-assets-menu",
+  "categories": [
+    "menus"
+  ],
+  "type": "registry:component"
+}

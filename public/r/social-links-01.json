@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "social-links-01",
+  "title": "Social Links 01",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "A social links section with a lined grid layout.",
+  "registryDependencies": [
+    "http://localhost:3000/r/style.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/social-links-01/social-links-01.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\r\nimport { IconPlaceholder } from \"@/registry/icons/icon-placeholder\"\r\n\r\nexport function SocialLinks01() {\r\n  return (\r\n    <div className=\"max-w-screen overflow-x-clip\">\r\n      <div className=\"container mx-auto px-4\">\r\n        <div className=\"relative border-x border-line\">\r\n          <div className=\"pointer-events-none absolute inset-0 -z-1 hidden gap-2 sm:grid sm:grid-cols-2 md:grid-cols-3\">\r\n            <div className=\"border-r border-line\" />\r\n            <div className=\"border-l border-line md:border-x\" />\r\n            <div className=\"border-l border-line max-md:hidden\" />\r\n          </div>\r\n\r\n          <ul className=\"grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3\">\r\n            {SOCIAL_LINKS.map((link, index) => {\r\n              return (\r\n                <li\r\n                  key={index}\r\n                  className={cn(\r\n                    \"max-sm:screen-line-top max-sm:screen-line-bottom\",\r\n                    \"sm:max-md:nth-[2n+1]:screen-line-top sm:max-md:nth-[2n+1]:screen-line-bottom\",\r\n                    \"md:nth-[3n+1]:screen-line-top md:nth-[3n+1]:screen-line-bottom\"\r\n                  )}\r\n                >\r\n                  <SocialLinkItem {...link} />\r\n                </li>\r\n              )\r\n            })}\r\n          </ul>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\ntype SocialLink = {\r\n  icon: string\r\n  title: string\r\n  href: string\r\n}\r\n\r\nfunction SocialLinkItem({ icon, title, href }: SocialLink) {\r\n  return (\r\n    <div className=\"relative flex cursor-pointer items-center gap-4 p-4 pr-2 transition-[background-color] ease-out hover:bg-accent/50 dark:hover:bg-accent/20\">\r\n      <div className=\"relative shrink-0 [--image-radius:var(--radius-lg)]\">\r\n        <img\r\n          className=\"size-8 rounded-(--image-radius) select-none\"\r\n          src={icon}\r\n          alt={`${title} logo`}\r\n        />\r\n        <div className=\"pointer-events-none absolute inset-0 rounded-(--image-radius) inset-ring-1 inset-ring-black/10 dark:inset-ring-white/15\" />\r\n      </div>\r\n\r\n      <h3 className=\"flex-1 font-medium\">\r\n        <a href={href} target=\"_blank\" rel=\"noopener\">\r\n          <span className=\"absolute inset-0\" aria-hidden />\r\n          {title}\r\n        </a>\r\n      </h3>\r\n\r\n      <IconPlaceholder\r\n        lucide=\"ArrowUpRightIcon\"\r\n        tabler=\"IconArrowUpRight\"\r\n        hugeicons=\"ArrowUpRight03Icon\"\r\n        phosphor=\"ArrowUpRightIcon\"\r\n        remixicon=\"RiArrowRightUpLine\"\r\n        className=\"size-4 shrink-0 text-muted-foreground\"\r\n      />\r\n    </div>\r\n  )\r\n}\r\n\r\nconst SOCIAL_LINKS: SocialLink[] = [\r\n  {\r\n    icon: \"https://assets.chanhdai.com/images/link-icons/x.webp\",\r\n    title: \"X\",\r\n    href: \"https://x.com/iamncdai\",\r\n  },\r\n  {\r\n    icon: \"https://assets.chanhdai.com/images/link-icons/github.webp\",\r\n    title: \"GitHub\",\r\n    href: \"https://github.com/ncdai\",\r\n  },\r\n  {\r\n    icon: \"https://assets.chanhdai.com/images/link-icons/linkedin.webp\",\r\n    title: \"LinkedIn\",\r\n    href: \"https://linkedin.com/in/ncdai\",\r\n  },\r\n  {\r\n    icon: \"https://assets.chanhdai.com/images/link-icons/dailydotdev.webp\",\r\n    title: \"daily.dev\",\r\n    href: \"https://app.daily.dev/ncdai\",\r\n  },\r\n  {\r\n    icon: \"https://assets.chanhdai.com/images/link-icons/discord.webp\",\r\n    title: \"Discord\",\r\n    href: \"https://discord.com/users/1186630645443739651\",\r\n  },\r\n  {\r\n    icon: \"https://assets.chanhdai.com/images/link-icons/youtube.webp\",\r\n    title: \"YouTube\",\r\n    href: \"https://www.youtube.com/@ncdai\",\r\n  },\r\n]\r\n",
+      "type": "registry:component",
+      "target": "@components/social-links-01.tsx"
+    }
+  ],
+  "meta": {
+    "createdAt": "2026-06-16",
+    "previewClassName": "min-h-svh content-center-safe"
+  },
+  "categories": [
+    "marketing"
+  ],
+  "type": "registry:block"
+}

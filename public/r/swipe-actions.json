@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "swipe-actions",
+  "title": "Swipe Actions",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Swipe a row in a list to reveal actions on the left or right.",
+  "dependencies": [
+    "@ncdai/react-swipe-actions",
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/swipe-actions/swipe-actions.tsx",
+      "content": "import type { ComponentProps } from \"react\"\r\nimport * as SwipeActionsPrimitive from \"@ncdai/react-swipe-actions\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\ntype SwipeSide = SwipeActionsPrimitive.SwipeSide\r\ntype SwipeState = SwipeActionsPrimitive.SwipeState\r\n\r\nconst SwipeRoot = SwipeActionsPrimitive.SwipeRoot\r\n\r\nconst SwipeItem = SwipeActionsPrimitive.SwipeItem\r\n\r\nconst SwipeActions = SwipeActionsPrimitive.SwipeActions\r\n\r\nfunction SwipeAction({\r\n  className,\r\n  children,\r\n  ...props\r\n}: ComponentProps<typeof SwipeActionsPrimitive.SwipeAction>) {\r\n  return (\r\n    <SwipeActionsPrimitive.SwipeAction\r\n      className={cn(\r\n        \"bg-secondary text-xs font-medium whitespace-nowrap text-secondary-foreground select-none focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-foreground data-armed:brightness-90 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      <SwipeActionsPrimitive.SwipeActionContent className=\"min-w-20 flex-col items-center justify-center gap-1.5 px-4\">\r\n        {children}\r\n      </SwipeActionsPrimitive.SwipeActionContent>\r\n    </SwipeActionsPrimitive.SwipeAction>\r\n  )\r\n}\r\n\r\nfunction SwipeContent({\r\n  className,\r\n  ...props\r\n}: ComponentProps<typeof SwipeActionsPrimitive.SwipeContent>) {\r\n  return (\r\n    <SwipeActionsPrimitive.SwipeContent\r\n      className={cn(\"bg-background data-dragging:cursor-grabbing\", className)}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport { SwipeAction, SwipeActions, SwipeContent, SwipeItem, SwipeRoot }\r\nexport type { SwipeSide, SwipeState }\r\n",
+      "type": "registry:component",
+      "target": "@components/swipe-actions.tsx"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/swipe-actions",
+  "categories": [
+    "controls"
+  ],
+  "type": "registry:component"
+}

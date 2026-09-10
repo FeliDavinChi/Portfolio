@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "fluid-gradient-text",
+  "title": "Fluid Gradient Text",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Render text with a fluid gradient that shifts with pointer movement.",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/fluid-gradient-text/fluid-gradient-text.tsx",
+      "content": "\"use client\"\r\n\r\nimport { motion, useMotionValue, useSpring, useTransform } from \"motion/react\"\r\n\r\nexport type FluidGradientTextProps = {\r\n  /** Text content rendered inside the SVG. */\r\n  text: string\r\n  /**\r\n   * SVG viewBox width used to scale the gradient and text layout.\r\n   * @default 1200\r\n   * */\r\n  svgViewBoxWidth?: number\r\n  /**\r\n   * SVG viewBox height used as the base text size.\r\n   * @default 300\r\n   * */\r\n  svgViewBoxHeight?: number\r\n}\r\n\r\nexport function FluidGradientText({\r\n  text,\r\n  svgViewBoxWidth = 1200,\r\n  svgViewBoxHeight = 300,\r\n}: FluidGradientTextProps) {\r\n  const gradientX1Raw = useMotionValue(0.5)\r\n  const gradientX1 = useSpring(\r\n    useTransform(gradientX1Raw, [0, 1], [0, svgViewBoxWidth]),\r\n    {\r\n      stiffness: 150,\r\n      damping: 25,\r\n    }\r\n  )\r\n\r\n  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {\r\n    const containerRect = event.currentTarget.getBoundingClientRect()\r\n    gradientX1Raw.set(\r\n      (event.clientX - containerRect.left) / containerRect.width\r\n    )\r\n  }\r\n\r\n  const handleMouseLeave = () => {\r\n    gradientX1Raw.set(0.5)\r\n  }\r\n\r\n  return (\r\n    <div\r\n      className=\"relative size-full overflow-hidden after:absolute after:bottom-0 after:h-px after:w-full after:bg-current/15\"\r\n      onMouseMove={handleMouseMove}\r\n      onMouseLeave={handleMouseLeave}\r\n    >\r\n      <svg\r\n        className=\"size-full translate-y-[37.5%] select-none\"\r\n        viewBox={`0 0 ${svgViewBoxWidth} ${svgViewBoxHeight}`}\r\n        fill=\"none\"\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n      >\r\n        <text\r\n          x=\"50%\"\r\n          y=\"50%\"\r\n          textAnchor=\"middle\"\r\n          dominantBaseline=\"central\"\r\n          stroke=\"currentColor\"\r\n          strokeOpacity=\"0.1\"\r\n          strokeWidth=\"2\"\r\n          fill=\"url(#fluid_gradient_text_linear)\"\r\n          style={{\r\n            fontFamily: \"Helvetica\",\r\n            fontSize: svgViewBoxHeight,\r\n            fontWeight: \"bold\",\r\n          }}\r\n        >\r\n          {text}\r\n        </text>\r\n        <defs>\r\n          <motion.linearGradient\r\n            id=\"fluid_gradient_text_linear\"\r\n            x1={gradientX1}\r\n            y1=\"0\"\r\n            x2={svgViewBoxWidth / 2}\r\n            y2={svgViewBoxHeight}\r\n            gradientUnits=\"userSpaceOnUse\"\r\n          >\r\n            <stop offset=\"0.625\" stopColor=\"currentColor\" stopOpacity=\"0\" />\r\n            <stop offset=\"1\" stopColor=\"currentColor\" />\r\n          </motion.linearGradient>\r\n        </defs>\r\n      </svg>\r\n    </div>\r\n  )\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/fluid-gradient-text.tsx"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/fluid-gradient-text",
+  "categories": [
+    "text-effects"
+  ],
+  "type": "registry:component"
+}

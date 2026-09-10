@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "team-01",
+  "title": "Team 01",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "A team section with glowing cards.",
+  "registryDependencies": [
+    "http://localhost:3000/r/glow-card-grid.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/team-01/team-01.tsx",
+      "content": "import { GlowCard, GlowCardGrid } from \"@/registry/components/glow-card-grid\"\r\n\r\nexport default function Team01() {\r\n  return (\r\n    <div className=\"container px-4 py-8\">\r\n      <GlowCardGrid className=\"lg:grid-cols-4\">\r\n        {CARDS.map((card) => (\r\n          <GlowCard\r\n            key={card.name}\r\n            name={card.name}\r\n            handle={card.handle}\r\n            avatar={card.avatar}\r\n          />\r\n        ))}\r\n      </GlowCardGrid>\r\n    </div>\r\n  )\r\n}\r\n\r\nconst CARDS = [\r\n  {\r\n    name: \"shadcn\",\r\n    handle: \"@shadcn\",\r\n    avatar: \"https://unavatar.io/x/shadcn\",\r\n  },\r\n  {\r\n    name: \"Evil Rabbit\",\r\n    handle: \"@evilrabbit_\",\r\n    avatar: \"https://unavatar.io/x/evilrabbit_\",\r\n  },\r\n  {\r\n    name: \"OrcDev\",\r\n    handle: \"@orcdev\",\r\n    avatar: \"https://unavatar.io/x/orcdev\",\r\n  },\r\n  {\r\n    name: \"David Haz\",\r\n    handle: \"@davidhdev\",\r\n    avatar: \"https://unavatar.io/x/davidhdev\",\r\n  },\r\n  {\r\n    name: \"Shu\",\r\n    handle: \"@shuding\",\r\n    avatar: \"https://unavatar.io/x/shuding\",\r\n  },\r\n  {\r\n    name: \"Emil Kowalski\",\r\n    handle: \"@emilkowalski\",\r\n    avatar: \"https://unavatar.io/x/emilkowalski\",\r\n  },\r\n  {\r\n    name: \"Aaron\",\r\n    handle: \"@aaronmahlke\",\r\n    avatar: \"https://unavatar.io/x/aaronmahlke\",\r\n  },\r\n  {\r\n    name: \"Chánh Đại\",\r\n    handle: \"@iamncdai\",\r\n    avatar: \"https://unavatar.io/x/iamncdai\",\r\n  },\r\n]\r\n",
+      "type": "registry:component",
+      "target": "@components/team-01.tsx"
+    }
+  ],
+  "meta": {
+    "createdAt": "2026-03-30",
+    "previewClassName": "min-h-svh place-items-center-safe content-center-safe"
+  },
+  "categories": [
+    "marketing"
+  ],
+  "type": "registry:block"
+}

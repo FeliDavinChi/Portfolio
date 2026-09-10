@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "line-nav",
+  "title": "Line Nav",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Vertical navigation with a line marker that expands on hover and active state.",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/line-nav/line-nav.tsx",
+      "content": "/**\r\n * This component is inspired by Devouring Details and Skiper UI.\r\n */\r\n\r\n\"use client\"\r\n\r\nimport { memo, useEffect, useRef } from \"react\"\r\nimport { motion } from \"motion/react\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nconst lineVariants = {\r\n  normal: { width: 24 },\r\n  active: { width: 40 },\r\n  hover: { width: 40 },\r\n}\r\n\r\nexport type LineNavItem = {\r\n  title: string\r\n  href: string\r\n}\r\n\r\nexport type LineNavProps = {\r\n  className?: string\r\n  /** @fumadocsHref #linenavitem */\r\n  items: LineNavItem[]\r\n  /** Href of the active item. */\r\n  activeHref?: string\r\n  /** Scroll the active item into view on mount. */\r\n  scrollActiveIntoView?: boolean\r\n  /** Called when an item is clicked. */\r\n  onItemClick?: (\r\n    item: LineNavItem,\r\n    event: React.MouseEvent<HTMLAnchorElement>\r\n  ) => void\r\n}\r\n\r\nexport function LineNav({\r\n  className,\r\n  items,\r\n  activeHref,\r\n  scrollActiveIntoView = true,\r\n  onItemClick,\r\n}: LineNavProps) {\r\n  const activeItemRef = useRef<HTMLAnchorElement | null>(null)\r\n\r\n  useEffect(() => {\r\n    if (scrollActiveIntoView) {\r\n      activeItemRef.current?.scrollIntoView({ block: \"center\" })\r\n    }\r\n  }, [scrollActiveIntoView])\r\n\r\n  return (\r\n    <nav\r\n      className={cn(\"flex flex-col gap-2 py-5.25\", className)}\r\n      style={\r\n        {\r\n          \"--line-nav-width\": `${lineVariants.normal.width}px`,\r\n        } as React.CSSProperties\r\n      }\r\n    >\r\n      {items.map((item, index) => {\r\n        const isActive = item.href === activeHref\r\n\r\n        return (\r\n          <LineNavItem\r\n            key={item.href}\r\n            ref={isActive ? activeItemRef : undefined}\r\n            title={item.title}\r\n            href={item.href}\r\n            active={isActive}\r\n            isLast={index === items.length - 1}\r\n            onClick={\r\n              onItemClick ? (event) => onItemClick(item, event) : undefined\r\n            }\r\n          />\r\n        )\r\n      })}\r\n    </nav>\r\n  )\r\n}\r\n\r\nconst LineNavItem = memo(function LineNavItem({\r\n  ref,\r\n  title,\r\n  href,\r\n  active = false,\r\n  isLast = false,\r\n  onClick,\r\n}: {\r\n  ref?: React.Ref<HTMLAnchorElement>\r\n  title: string\r\n  href: string\r\n  active?: boolean\r\n  isLast?: boolean\r\n  onClick?: React.MouseEventHandler<HTMLAnchorElement>\r\n}) {\r\n  return (\r\n    <>\r\n      {/*\r\n        Rendered as a plain anchor to stay framework-agnostic. For client-side\r\n        navigation in Next.js, swap `motion.a` for `motion.create(Link)`\r\n        (import Link from \"next/link\").\r\n      */}\r\n      <motion.a\r\n        ref={ref}\r\n        aria-current={active ? \"page\" : undefined}\r\n        className=\"group relative flex h-px items-center gap-3 after:absolute after:top-1/2 after:left-0 after:size-full after:-translate-y-1/2 after:p-3.5\"\r\n        href={href}\r\n        initial={false}\r\n        animate={active ? \"active\" : \"normal\"}\r\n        whileHover=\"hover\"\r\n        onClick={onClick}\r\n      >\r\n        <motion.span\r\n          className=\"block h-px shrink-0 bg-foreground/20 transition-[background-color] ease-out group-hover:bg-foreground group-aria-[current=page]:bg-foreground\"\r\n          variants={lineVariants}\r\n          transition={{ type: \"spring\", stiffness: 200, damping: 20 }}\r\n        />\r\n        <span className=\"text-sm whitespace-nowrap text-muted-foreground transition-[color] ease-out group-hover:text-foreground group-aria-[current=page]:text-foreground\">\r\n          {title}\r\n        </span>\r\n      </motion.a>\r\n\r\n      {!isLast && (\r\n        <>\r\n          <span className=\"block h-px w-(--line-nav-width) bg-foreground/20\" />\r\n          <span className=\"block h-px w-(--line-nav-width) bg-foreground/20\" />\r\n        </>\r\n      )}\r\n    </>\r\n  )\r\n})\r\n",
+      "type": "registry:component",
+      "target": "@components/line-nav.tsx"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/line-nav",
+  "categories": [
+    "navigation"
+  ],
+  "type": "registry:component"
+}

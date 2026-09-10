@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "haptic",
+  "title": "Haptic Feedback",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Trigger haptic feedback on mobile devices.",
+  "files": [
+    {
+      "path": "src/registry/lib/haptic/haptic.ts",
+      "content": "const isTouchDevice =\r\n  typeof window !== \"undefined\"\r\n    ? window.matchMedia(\"(pointer: coarse)\").matches\r\n    : false\r\n\r\n/**\r\n * Trigger haptic feedback on mobile devices.\r\n * Uses Vibration API on Android/modern browsers, and iOS checkbox trick on iOS.\r\n *\r\n * @param pattern - Vibration duration (ms) or pattern.\r\n * Custom patterns only work on Android devices. iOS uses fixed feedback.\r\n * See [Vibration API](https://developer.mozilla.org/docs/Web/API/Vibration_API)\r\n *\r\n * @example\r\n * import { haptic } from \"@/lib/haptic\"\r\n *\r\n * <Button onClick={() => haptic()}>Haptic</Button>\r\n */\r\nexport function haptic(pattern: number | number[] = 50) {\r\n  try {\r\n    if (!isTouchDevice) return\r\n\r\n    if (\"vibrate\" in navigator) {\r\n      navigator.vibrate(pattern)\r\n      return\r\n    }\r\n\r\n    // iOS haptic trick via checkbox switch element\r\n    const label = document.createElement(\"label\")\r\n    label.ariaHidden = \"true\"\r\n    label.style.display = \"none\"\r\n\r\n    const input = document.createElement(\"input\")\r\n    input.type = \"checkbox\"\r\n    input.setAttribute(\"switch\", \"\")\r\n    label.appendChild(input)\r\n\r\n    try {\r\n      document.head.appendChild(label)\r\n      label.click()\r\n    } finally {\r\n      document.head.removeChild(label)\r\n    }\r\n  } catch {}\r\n}\r\n",
+      "type": "registry:lib",
+      "target": "@lib/haptic.ts"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/haptic-feedback",
+  "categories": [
+    "utilities"
+  ],
+  "type": "registry:lib"
+}

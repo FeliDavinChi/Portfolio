@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "theme-switcher",
+  "title": "Theme Switcher",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Toggle between system, light, and dark themes in Next.js apps.",
+  "dependencies": [
+    "next-themes",
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/theme-switcher/theme-switcher.tsx",
+      "content": "\"use client\"\r\n\r\nimport type { JSX } from \"react\"\r\nimport { useSyncExternalStore } from \"react\"\r\nimport { motion } from \"motion/react\"\r\nimport { useTheme } from \"next-themes\"\r\n\r\nimport { IconPlaceholder } from \"@/registry/icons/icon-placeholder\"\r\n\r\nfunction ThemeOption({\r\n  icon,\r\n  value,\r\n  isActive,\r\n  onClick,\r\n}: {\r\n  icon: JSX.Element\r\n  value: string\r\n  isActive?: boolean\r\n  onClick: (value: string) => void\r\n}) {\r\n  return (\r\n    <button\r\n      data-active={isActive}\r\n      className=\"relative flex size-8 items-center justify-center rounded-full text-muted-foreground transition-[color] hover:text-foreground data-[active=true]:text-foreground [&_svg]:size-4\"\r\n      role=\"radio\"\r\n      aria-checked={isActive}\r\n      aria-label={`Switch to ${value} theme`}\r\n      onClick={() => onClick(value)}\r\n    >\r\n      {icon}\r\n\r\n      {isActive && (\r\n        <motion.span\r\n          layoutId=\"theme-option\"\r\n          transition={{ type: \"spring\", bounce: 0.3, duration: 0.6 }}\r\n          className=\"absolute inset-0 rounded-full border\"\r\n        />\r\n      )}\r\n    </button>\r\n  )\r\n}\r\n\r\nconst THEME_OPTIONS = [\r\n  {\r\n    icon: (\r\n      <IconPlaceholder\r\n        lucide=\"MonitorIcon\"\r\n        tabler=\"IconDeviceDesktop\"\r\n        hugeicons=\"ComputerIcon\"\r\n        phosphor=\"DesktopIcon\"\r\n        remixicon=\"RiComputerLine\"\r\n      />\r\n    ),\r\n    value: \"system\",\r\n  },\r\n  {\r\n    icon: (\r\n      <IconPlaceholder\r\n        lucide=\"SunIcon\"\r\n        tabler=\"IconSun\"\r\n        hugeicons=\"Sun03Icon\"\r\n        phosphor=\"SunIcon\"\r\n        remixicon=\"RiSunLine\"\r\n      />\r\n    ),\r\n    value: \"light\",\r\n  },\r\n  {\r\n    icon: (\r\n      <IconPlaceholder\r\n        lucide=\"MoonIcon\"\r\n        tabler=\"IconMoon\"\r\n        hugeicons=\"Moon02Icon\"\r\n        phosphor=\"MoonIcon\"\r\n        remixicon=\"RiMoonLine\"\r\n      />\r\n    ),\r\n    value: \"dark\",\r\n  },\r\n]\r\n\r\nfunction ThemeSwitcher() {\r\n  const { theme, setTheme } = useTheme()\r\n\r\n  const isMounted = useSyncExternalStore(\r\n    () => () => {},\r\n    () => true,\r\n    () => false\r\n  )\r\n\r\n  if (!isMounted) {\r\n    return <div className=\"flex h-8 w-24\" />\r\n  }\r\n\r\n  return (\r\n    <motion.div\r\n      key={String(isMounted)}\r\n      initial={{ opacity: 0 }}\r\n      animate={{ opacity: 1 }}\r\n      transition={{ duration: 0.3 }}\r\n      className=\"inline-flex items-center overflow-clip rounded-full bg-background inset-ring-1 inset-ring-border\"\r\n      role=\"radiogroup\"\r\n    >\r\n      {THEME_OPTIONS.map((option) => (\r\n        <ThemeOption\r\n          key={option.value}\r\n          icon={option.icon}\r\n          value={option.value}\r\n          isActive={theme === option.value}\r\n          onClick={setTheme}\r\n        />\r\n      ))}\r\n    </motion.div>\r\n  )\r\n}\r\n\r\nexport { ThemeSwitcher }\r\n",
+      "type": "registry:component",
+      "target": "@components/theme-switcher.tsx"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/theme-switcher",
+  "categories": [
+    "controls"
+  ],
+  "type": "registry:component"
+}

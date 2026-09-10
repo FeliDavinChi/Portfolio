@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonial",
+  "title": "Testimonial",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Display user feedback with author info, avatar, and verified badge.",
+  "files": [
+    {
+      "path": "src/registry/components/testimonial/testimonial.tsx",
+      "content": "import type { ComponentProps } from \"react\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nexport function Testimonial({ className, ...props }: ComponentProps<\"figure\">) {\r\n  return (\r\n    <figure\r\n      data-slot=\"testimonial\"\r\n      className={cn(\"flex h-full flex-col\", className)}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport function TestimonialQuote({\r\n  className,\r\n  ...props\r\n}: ComponentProps<\"blockquote\">) {\r\n  return (\r\n    <blockquote\r\n      data-slot=\"testimonial-quote\"\r\n      className={cn(\r\n        \"grow px-4 py-3 text-base text-pretty text-foreground\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport function TestimonialAuthor({\r\n  className,\r\n  ...props\r\n}: ComponentProps<\"figcaption\">) {\r\n  return (\r\n    <figcaption\r\n      data-slot=\"testimonial-author\"\r\n      className={cn(\r\n        \"grid grid-cols-[auto_1fr] grid-rows-2 items-center gap-x-3.5 px-4 pt-1 pb-3\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport function TestimonialAvatar({\r\n  className,\r\n  ...props\r\n}: ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      data-slot=\"testimonial-avatar\"\r\n      className={cn(\"relative row-span-2 size-8 shrink-0\", className)}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport function TestimonialAvatarImg({\r\n  className,\r\n  src,\r\n  alt,\r\n  ...props\r\n}: ComponentProps<\"img\">) {\r\n  return (\r\n    <img\r\n      data-slot=\"testimonial-avatar-img\"\r\n      className={cn(\"size-8 rounded-full select-none\", className)}\r\n      src={src}\r\n      alt={alt}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport function TestimonialAvatarRing({\r\n  className,\r\n  ...props\r\n}: ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      data-slot=\"testimonial-avatar-ring\"\r\n      className={cn(\r\n        \"pointer-events-none absolute inset-0 rounded-full inset-ring-1 inset-ring-black/10 dark:inset-ring-white/15\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport function TestimonialAuthorName({\r\n  className,\r\n  ...props\r\n}: ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      data-slot=\"testimonial-author-name\"\r\n      className={cn(\r\n        \"flex items-center gap-1.5 text-sm leading-4.5 font-semibold text-foreground\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport function TestimonialAuthorTagline({\r\n  className,\r\n  ...props\r\n}: ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      data-slot=\"testimonial-author-tagline\"\r\n      className={cn(\r\n        \"text-xs leading-4 text-balance text-muted-foreground\",\r\n        className\r\n      )}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport function TestimonialVerifiedBadge({\r\n  className,\r\n  ...props\r\n}: ComponentProps<\"span\">) {\r\n  return (\r\n    <span\r\n      data-slot=\"testimonial-verified-badge\"\r\n      className={cn(\r\n        \"flex [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-3.5\",\r\n        className\r\n      )}\r\n      aria-hidden\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/testimonial.tsx"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/testimonial",
+  "categories": [
+    "marketing"
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonial-2",
+  "title": "Testimonial 2",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Display a testimonial quote with author attribution and source link.",
+  "files": [
+    {
+      "path": "src/registry/components/testimonial-2/testimonial-2.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\r\n\r\nexport type Testimonial2Props = {\r\n  /** Full display name of the person giving the testimonial. */\r\n  authorName: string\r\n  /** Short tagline, title, or description of the person. */\r\n  authorTagline: string\r\n  /** Link to the person's profile, website, or social media page. */\r\n  url: string\r\n  /** The testimonial text content or recommendation message. */\r\n  quote: string\r\n  /** Additional CSS classes to apply to the testimonial container. */\r\n  className?: string\r\n}\r\n\r\nexport function Testimonial2({\r\n  className,\r\n  authorName,\r\n  authorTagline,\r\n  url,\r\n  quote,\r\n}: Testimonial2Props) {\r\n  return (\r\n    <figure className={cn(\"relative flex flex-col gap-6 pl-3\", className)}>\r\n      <blockquote className=\"relative block w-full font-serif text-xl text-foreground md:w-lg md:text-2xl\">\r\n        <span\r\n          className=\"absolute -left-3 text-muted-foreground select-none\"\r\n          aria-hidden=\"true\"\r\n        >\r\n          “\r\n        </span>\r\n        <p className=\"inline text-pretty\">{quote}</p>\r\n        <span\r\n          className=\"absolute translate-x-0.5 text-muted-foreground select-none\"\r\n          aria-hidden=\"true\"\r\n        >\r\n          ”\r\n        </span>\r\n      </blockquote>\r\n\r\n      <figcaption className=\"ml-auto flex w-full items-center gap-2 md:w-1/2\">\r\n        <div className=\"hidden h-px grow translate-y-px bg-border md:block\" />\r\n\r\n        <div className=\"flex flex-col md:ml-auto md:text-right\">\r\n          <span className=\"text-sm leading-none font-medium\">\r\n            <a href={url} target=\"_blank\" rel=\"noopener\">\r\n              <span className=\"absolute inset-0\" aria-hidden />\r\n              {authorName}\r\n            </a>\r\n            <span className=\"mt-1 block text-muted-foreground md:mt-0 md:inline\">\r\n              <span className=\"hidden text-foreground md:inline\">, </span>\r\n              {authorTagline}\r\n            </span>\r\n          </span>\r\n        </div>\r\n      </figcaption>\r\n    </figure>\r\n  )\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/testimonial-2.tsx"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/testimonial-2",
+  "categories": [
+    "marketing"
+  ],
+  "type": "registry:component"
+}

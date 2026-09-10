@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinning-circular-text",
+  "title": "Spinning Circular Text",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Text arranged in a circle with a continuous spinning animation.",
+  "files": [
+    {
+      "path": "src/registry/components/spinning-circular-text/spinning-circular-text.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\r\n\r\nexport type SpinningCircularTextProps = Omit<\r\n  React.ComponentProps<\"div\">,\r\n  \"children\"\r\n> & {\r\n  text: string\r\n\r\n  /**\r\n   * @defaultValue 1\r\n   * */\r\n  charSpacing?: number\r\n\r\n  /**\r\n   * @defaultValue 1rem\r\n   * */\r\n  fontSize?: string\r\n\r\n  /**\r\n   * Class names applied to the spinning ring, e.g. to override the\r\n   * animation duration (`duration-[10s]`) or easing.\r\n   * */\r\n  spinClassName?: string\r\n\r\n  /**\r\n   * Customize how each character is rendered, e.g. to wrap it in a\r\n   * `motion.span` for per-character effects. The returned node is placed\r\n   * inside a positioned wrapper, so positioning is handled for you.\r\n   * */\r\n  renderChar?: (char: string, index: number) => React.ReactNode\r\n}\r\n\r\nexport function SpinningCircularText({\r\n  text,\r\n  charSpacing = 1,\r\n  fontSize = \"1rem\",\r\n  spinClassName,\r\n  renderChar,\r\n  className,\r\n  style,\r\n  ...props\r\n}: SpinningCircularTextProps) {\r\n  return (\r\n    <div\r\n      className={cn(\r\n        \"grid size-(--sc-container-size) place-items-center font-mono font-medium uppercase select-none\",\r\n        className\r\n      )}\r\n      style={\r\n        {\r\n          \"--sc-size\": fontSize,\r\n          \"--sc-char-count\": text.length,\r\n          \"--sc-char-spacing\": charSpacing,\r\n          \"--sc-inner-angle\": \"calc((360 / var(--sc-char-count)) * 1deg)\",\r\n          \"--sc-radius-factor\":\r\n            \"calc(var(--sc-char-spacing) / sin(var(--sc-inner-angle)))\",\r\n          \"--sc-radius\": \"calc(var(--sc-radius-factor) * -1ch)\",\r\n          \"--sc-container-size\":\r\n            \"calc(var(--sc-radius-factor) * var(--sc-size) * 2)\",\r\n          ...style,\r\n        } as React.CSSProperties\r\n      }\r\n      {...props}\r\n    >\r\n      <div\r\n        className={cn(\r\n          \"relative animate-spin-ccw text-(size:--sc-size) leading-none\",\r\n          \"*:absolute *:top-1/2 *:left-1/2 *:inline-block\",\r\n          \"*:[--sc-char-rotate:calc(var(--sc-inner-angle)*var(--sc-char-index))]\",\r\n          \"*:transform-[translate(-50%,-50%)_rotate(var(--sc-char-rotate))_translateY(var(--sc-radius))]\",\r\n          spinClassName\r\n        )}\r\n        aria-hidden\r\n      >\r\n        {text.split(\"\").map((char, index) => (\r\n          <span\r\n            key={index}\r\n            style={{ \"--sc-char-index\": index } as React.CSSProperties}\r\n          >\r\n            {renderChar ? renderChar(char, index) : char}\r\n          </span>\r\n        ))}\r\n      </div>\r\n      <span className=\"sr-only\">{text}</span>\r\n    </div>\r\n  )\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/spinning-circular-text.tsx"
+    }
+  ],
+  "cssVars": {
+    "theme": {
+      "--animate-spin-ccw": "spin-ccw var(--tw-animation-duration, var(--tw-duration, 6s)) linear infinite"
+    }
+  },
+  "css": {
+    "@keyframes spin-ccw": {
+      "to": {
+        "rotate": "-360deg"
+      }
+    }
+  },
+  "docs": "https://chanhdai.com/components/spinning-circular-text",
+  "categories": [
+    "text-effects"
+  ],
+  "type": "registry:component"
+}

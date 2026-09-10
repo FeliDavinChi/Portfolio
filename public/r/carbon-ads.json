@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carbon-ads",
+  "title": "Carbon Ads",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Display a Carbon Ads unit in Next.js apps, styled to match your shadcn/ui theme.",
+  "files": [
+    {
+      "path": "src/registry/components/carbon-ads/carbon-ads.tsx",
+      "content": "\"use client\"\r\n\r\nimport { useEffect, useRef, useState } from \"react\"\r\nimport { usePathname } from \"next/navigation\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\ndeclare global {\r\n  interface Window {\r\n    _carbonads?: {\r\n      refresh: () => void\r\n    }\r\n  }\r\n}\r\n\r\nconst SCRIPT_ID = \"_carbonads_js\"\r\n\r\nexport type CarbonAdsProps = {\r\n  /** The `serve` query parameter of your Carbon ad tag. */\r\n  serve: string\r\n  /** The `placement` query parameter of your Carbon ad tag. */\r\n  placement: string\r\n  /**\r\n   * Ad layout. `responsive` adapts to the container width, `cover` is the\r\n   * taller unit.\r\n   * @defaultValue \"responsive\"\r\n   */\r\n  format?: \"cover\" | \"responsive\"\r\n  className?: string\r\n}\r\n\r\nexport function CarbonAds({\r\n  serve,\r\n  placement,\r\n  format = \"responsive\",\r\n  className,\r\n}: CarbonAdsProps) {\r\n  const pathname = usePathname()\r\n  const containerRef = useRef<HTMLDivElement>(null)\r\n  const [blocked, setBlocked] = useState(false)\r\n\r\n  useEffect(() => {\r\n    const container = containerRef.current\r\n    if (!container) return\r\n\r\n    // carbon.js inserts the ad after its script tag, so the tag lives here.\r\n    // A loading script runs its own init, so refresh only after it loaded.\r\n    const script = document.getElementById(SCRIPT_ID)\r\n    if (script) {\r\n      if (container.contains(script) && script.dataset.loaded) {\r\n        window._carbonads?.refresh()\r\n      }\r\n      return\r\n    }\r\n\r\n    const el = document.createElement(\"script\")\r\n    el.id = SCRIPT_ID\r\n    el.async = true\r\n    el.type = \"text/javascript\"\r\n    el.src = `//cdn.carbonads.com/carbon.js?serve=${serve}&placement=${placement}&format=${format}`\r\n    el.onload = () => {\r\n      el.dataset.loaded = \"true\"\r\n    }\r\n    el.onerror = () => setBlocked(true)\r\n    container.appendChild(el)\r\n  }, [pathname, serve, placement, format])\r\n\r\n  if (blocked) return null\r\n\r\n  return (\r\n    <div\r\n      ref={containerRef}\r\n      data-slot=\"carbon-ads\"\r\n      data-format={format}\r\n      className={cn(\"min-h-39 data-[format=cover]:min-h-70\", className)}\r\n    />\r\n  )\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/carbon-ads.tsx"
+    }
+  ],
+  "css": {
+    "#carbonads #carbon-responsive": {
+      "--carbon-padding": "calc(var(--spacing) * 3)",
+      "--carbon-bg-primary": "color-mix(in oklab, var(--muted) 50%, var(--background))",
+      "--carbon-bg-secondary": "var(--border)",
+      "--carbon-text-color": "var(--foreground)",
+      "@apply gap-2 font-sans": {}
+    },
+    "#carbonads #carbon-responsive .carbon-poweredby": {
+      "@apply text-xs text-muted-foreground/80 opacity-100": {}
+    }
+  },
+  "docs": "https://chanhdai.com/components/carbon-ads",
+  "categories": [
+    "utilities"
+  ],
+  "type": "registry:component"
+}

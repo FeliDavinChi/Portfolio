@@ -1,0 +1,35 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "copy-button",
+  "title": "Copy Button",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Copy text to clipboard with visual, haptic, and audio feedback.",
+  "dependencies": [
+    "motion",
+    "@rexa-developer/tiks",
+    "web-haptics"
+  ],
+  "registryDependencies": [
+    "button",
+    "http://localhost:3000/r/icon-swap.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/copy-button/copy-button.tsx",
+      "content": "\"use client\"\r\n\r\nimport type { ComponentProps } from \"react\"\r\nimport { motion } from \"motion/react\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\nimport type { CopyState } from \"@/hooks/use-copy-to-clipboard\"\r\nimport { useCopyToClipboard } from \"@/hooks/use-copy-to-clipboard\"\r\nimport { Button } from \"@/components/ui/button\"\r\nimport { IconSwap, IconSwapItem } from \"@/registry/components/icon-swap\"\r\nimport { IconPlaceholder } from \"@/registry/icons/icon-placeholder\"\r\n\r\nexport type CopyStateIconProps = {\r\n  state: CopyState\r\n  /** Custom icon for idle state. */\r\n  idleIcon?: React.ReactNode\r\n  /** Custom icon for done state. */\r\n  doneIcon?: React.ReactNode\r\n  /** Custom icon for error state. */\r\n  errorIcon?: React.ReactNode\r\n}\r\n\r\nexport function CopyStateIcon({\r\n  state,\r\n  idleIcon,\r\n  doneIcon,\r\n  errorIcon,\r\n}: CopyStateIconProps) {\r\n  return (\r\n    <IconSwap>\r\n      <IconSwapItem key={state} as={motion.span}>\r\n        {state === \"idle\" &&\r\n          (idleIcon ?? (\r\n            <IconPlaceholder\r\n              data-slot=\"idle-icon\"\r\n              lucide=\"CopyIcon\"\r\n              tabler=\"IconCopy\"\r\n              hugeicons=\"Copy01Icon\"\r\n              phosphor=\"CopyIcon\"\r\n              remixicon=\"RiFileCopyLine\"\r\n            />\r\n          ))}\r\n\r\n        {state === \"done\" &&\r\n          (doneIcon ?? (\r\n            <IconPlaceholder\r\n              data-slot=\"done-icon\"\r\n              lucide=\"CheckIcon\"\r\n              tabler=\"IconCheck\"\r\n              hugeicons=\"Tick02Icon\"\r\n              phosphor=\"CheckIcon\"\r\n              remixicon=\"RiCheckLine\"\r\n            />\r\n          ))}\r\n\r\n        {state === \"error\" &&\r\n          (errorIcon ?? (\r\n            <IconPlaceholder\r\n              data-slot=\"error-icon\"\r\n              lucide=\"CircleXIcon\"\r\n              tabler=\"IconX\"\r\n              hugeicons=\"CancelCircleIcon\"\r\n              phosphor=\"XCircleIcon\"\r\n              remixicon=\"RiCloseCircleLine\"\r\n            />\r\n          ))}\r\n      </IconSwapItem>\r\n    </IconSwap>\r\n  )\r\n}\r\n\r\nexport type CopyButtonProps = ComponentProps<typeof Button> & {\r\n  /** The text to copy, or a function that returns the text. */\r\n  text: string | (() => string)\r\n  /** Called with the copied text on successful copy. */\r\n  onCopySuccess?: (text: string) => void\r\n  /** Called with the error if the copy operation fails. */\r\n  onCopyError?: (error: Error) => void\r\n} & Omit<CopyStateIconProps, \"state\">\r\n\r\nexport function CopyButton({\r\n  className,\r\n  size = \"icon\",\r\n  children,\r\n  text,\r\n  idleIcon,\r\n  doneIcon,\r\n  errorIcon,\r\n  onClick,\r\n  onCopySuccess,\r\n  onCopyError,\r\n  ...props\r\n}: CopyButtonProps) {\r\n  const { state, copy } = useCopyToClipboard({\r\n    onCopySuccess,\r\n    onCopyError,\r\n  })\r\n\r\n  return (\r\n    <Button\r\n      className={cn(\"will-change-transform\", className)}\r\n      size={size}\r\n      onClick={(e) => {\r\n        copy(text)\r\n        onClick?.(e)\r\n      }}\r\n      aria-label=\"Copy\"\r\n      {...props}\r\n    >\r\n      <CopyStateIcon\r\n        state={state}\r\n        idleIcon={idleIcon}\r\n        doneIcon={doneIcon}\r\n        errorIcon={errorIcon}\r\n      />\r\n      {children}\r\n    </Button>\r\n  )\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/copy-button.tsx"
+    },
+    {
+      "path": "src/hooks/use-copy-to-clipboard.ts",
+      "content": "\"use client\"\r\n\r\nimport { useCallback, useRef, useState } from \"react\"\r\nimport { useTiks } from \"@rexa-developer/tiks/react\"\r\nimport { useWebHaptics } from \"web-haptics/react\"\r\n\r\nexport type CopyState = \"idle\" | \"done\" | \"error\"\r\n\r\nexport type UseCopyToClipboardOptions = {\r\n  onCopySuccess?: (text: string) => void\r\n  onCopyError?: (error: Error) => void\r\n  resetDelay?: number\r\n}\r\n\r\nexport function useCopyToClipboard({\r\n  onCopySuccess,\r\n  onCopyError,\r\n  resetDelay = 1500,\r\n}: UseCopyToClipboardOptions = {}) {\r\n  const [state, setState] = useState<CopyState>(\"idle\")\r\n  const resetTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)\r\n\r\n  const { trigger: haptic } = useWebHaptics()\r\n  const { success: tiksSuccess, error: tiksError } = useTiks()\r\n\r\n  const copy = useCallback(\r\n    async (text: string | (() => string)) => {\r\n      // Clear any pending reset\r\n      if (resetTimeoutRef.current) {\r\n        clearTimeout(resetTimeoutRef.current)\r\n      }\r\n\r\n      try {\r\n        const finalText = typeof text === \"function\" ? text() : text\r\n        await navigator.clipboard.writeText(finalText)\r\n\r\n        setState(\"done\")\r\n\r\n        haptic(\"success\")\r\n        tiksSuccess()\r\n\r\n        onCopySuccess?.(finalText)\r\n      } catch (error) {\r\n        setState(\"error\")\r\n\r\n        haptic(\"error\")\r\n        tiksError()\r\n\r\n        onCopyError?.(error instanceof Error ? error : new Error(\"Copy failed\"))\r\n      } finally {\r\n        // Schedule reset to idle\r\n        resetTimeoutRef.current = setTimeout(() => {\r\n          setState(\"idle\")\r\n        }, resetDelay)\r\n      }\r\n    },\r\n    [onCopySuccess, onCopyError, haptic, tiksSuccess, tiksError, resetDelay]\r\n  )\r\n\r\n  return { state, copy } as const\r\n}\r\n",
+      "type": "registry:hook",
+      "target": "@hooks/use-copy-to-clipboard.ts"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/copy-button",
+  "categories": [
+    "utilities"
+  ],
+  "type": "registry:component"
+}

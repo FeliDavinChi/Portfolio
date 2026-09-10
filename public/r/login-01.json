@@ -1,0 +1,35 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "login-01",
+  "title": "Login 01",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "A simple login form.",
+  "registryDependencies": [
+    "button",
+    "card",
+    "input",
+    "label",
+    "field"
+  ],
+  "files": [
+    {
+      "path": "src/registry/blocks/login-01/page.tsx",
+      "content": "import { LoginForm } from \"@/registry/blocks/login-01/components/login-form\"\r\n\r\nexport default function Page() {\r\n  return (\r\n    <div className=\"flex min-h-svh w-full items-center justify-center p-6 md:p-10\">\r\n      <div className=\"w-full max-w-sm\">\r\n        <LoginForm />\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n",
+      "type": "registry:page",
+      "target": "app/login/page.tsx"
+    },
+    {
+      "path": "src/registry/blocks/login-01/components/login-form.tsx",
+      "content": "import { cn } from \"@/lib/utils\"\r\nimport { Button } from \"@/components/ui/button\"\r\nimport {\r\n  Card,\r\n  CardContent,\r\n  CardDescription,\r\n  CardHeader,\r\n  CardTitle,\r\n} from \"@/components/ui/card\"\r\nimport {\r\n  Field,\r\n  FieldDescription,\r\n  FieldGroup,\r\n  FieldLabel,\r\n} from \"@/components/ui/field\"\r\nimport { Input } from \"@/components/ui/input\"\r\n\r\nexport function LoginForm({\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <div className={cn(\"flex flex-col gap-6\", className)} {...props}>\r\n      <Card>\r\n        <CardHeader>\r\n          <CardTitle>Login to your account</CardTitle>\r\n          <CardDescription className=\"text-pretty\">\r\n            Enter your email below to login to your account\r\n          </CardDescription>\r\n        </CardHeader>\r\n\r\n        <CardContent>\r\n          <form>\r\n            <FieldGroup>\r\n              <Field>\r\n                <FieldLabel htmlFor=\"email\">Email</FieldLabel>\r\n                <Input\r\n                  id=\"email\"\r\n                  type=\"email\"\r\n                  placeholder=\"name@example.com\"\r\n                  required\r\n                />\r\n              </Field>\r\n\r\n              <Field>\r\n                <div className=\"flex items-center\">\r\n                  <FieldLabel htmlFor=\"password\">Password</FieldLabel>\r\n                  <a\r\n                    href=\"#\"\r\n                    className=\"ml-auto inline-block text-sm text-muted-foreground underline-offset-4 hover:underline\"\r\n                    tabIndex={-1}\r\n                  >\r\n                    Forgot your password?\r\n                  </a>\r\n                </div>\r\n                <Input\r\n                  id=\"password\"\r\n                  type=\"password\"\r\n                  placeholder=\"••••••••\"\r\n                  required\r\n                />\r\n              </Field>\r\n\r\n              <Field>\r\n                <Button type=\"submit\">Login</Button>\r\n\r\n                <Button variant=\"outline\" type=\"button\">\r\n                  Login with Google\r\n                </Button>\r\n\r\n                <FieldDescription className=\"text-center\">\r\n                  Don&rsquo;t have an account? <a href=\"#\">Sign up</a>\r\n                </FieldDescription>\r\n              </Field>\r\n            </FieldGroup>\r\n          </form>\r\n        </CardContent>\r\n      </Card>\r\n    </div>\r\n  )\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/login-form.tsx"
+    }
+  ],
+  "meta": {
+    "createdAt": "2026-02-22"
+  },
+  "categories": [
+    "application"
+  ],
+  "type": "registry:block"
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "chevrons-up-down-icon",
+  "author": "ncdai <dai@chanhdai.com>",
+  "description": "Animated chevrons icon that morphs between up and down directions.",
+  "dependencies": [
+    "motion"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/chevrons-up-down-icon/chevrons-up-down-icon.tsx",
+      "content": "\"use client\"\r\n\r\nimport { useImperativeHandle } from \"react\"\r\nimport { motion, useAnimation } from \"motion/react\"\r\n\r\nexport type ChevronsUpDownIconHandle = {\r\n  startAnimation: () => void\r\n  stopAnimation: () => void\r\n}\r\n\r\nexport type ChevronsUpDownIconProps = React.ComponentPropsWithoutRef<\"svg\"> & {\r\n  ref?: React.Ref<ChevronsUpDownIconHandle>\r\n  duration?: number\r\n}\r\n\r\nexport function ChevronsUpDownIcon({\r\n  ref,\r\n  duration = 0.3,\r\n  ...props\r\n}: ChevronsUpDownIconProps) {\r\n  const controls = useAnimation()\r\n\r\n  useImperativeHandle(ref, () => {\r\n    return {\r\n      startAnimation: () => controls.start(\"animate\"),\r\n      stopAnimation: () => controls.start(\"normal\"),\r\n    }\r\n  })\r\n\r\n  return (\r\n    <svg\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n      width=\"24\"\r\n      height=\"24\"\r\n      viewBox=\"0 0 24 24\"\r\n      fill=\"none\"\r\n      stroke=\"currentColor\"\r\n      strokeWidth=\"2\"\r\n      strokeLinecap=\"round\"\r\n      strokeLinejoin=\"round\"\r\n      aria-hidden\r\n      {...props}\r\n    >\r\n      <motion.path\r\n        d=\"M7 15L12 20L17 15\"\r\n        variants={{\r\n          normal: {\r\n            d: \"M7 15L12 20L17 15\",\r\n          },\r\n          animate: {\r\n            d: \"M7 20L12 15L17 20\",\r\n          },\r\n        }}\r\n        initial=\"normal\"\r\n        animate={controls}\r\n        transition={{\r\n          duration,\r\n        }}\r\n      />\r\n      <motion.path\r\n        d=\"M7 9L12 4L17 9\"\r\n        variants={{\r\n          normal: {\r\n            d: \"M7 9L12 4L17 9\",\r\n          },\r\n          animate: {\r\n            d: \"M7 4L12 9L17 4\",\r\n          },\r\n        }}\r\n        initial=\"normal\"\r\n        animate={controls}\r\n        transition={{\r\n          duration,\r\n        }}\r\n      />\r\n    </svg>\r\n  )\r\n}\r\n",
+      "type": "registry:component",
+      "target": "@components/chevrons-up-down-icon.tsx"
+    }
+  ],
+  "docs": "https://chanhdai.com/components/chevrons-up-down-icon",
+  "categories": [
+    "effects"
+  ],
+  "type": "registry:component"
+}
