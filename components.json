@@ -22,7 +22,7 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@manasgupta": "https://manasgupta.dev/r/{name}.json",
+    "@manasgupta": "https://manasgupta.me/r/{name}.json",
     "@shadcncraft": {
       "url": "https://shadcncraft.com/r/{style}/{name}",
       "headers": {

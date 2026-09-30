@@ -26,11 +26,11 @@ const INSPIRED_BY = [
 ]
 
 const OPENPANEL_URL =
-  "https://openpanel.dev?utm_source=manasgupta.dev&utm_medium=referral&utm_campaign=footer"
+  "https://openpanel.dev?utm_source=manasgupta.me&utm_medium=referral&utm_campaign=footer"
 
 // Not derived from `SITE_INFO.url`: that follows `NEXT_PUBLIC_APP_URL` and
 // would read `ncdai.localhost` in dev.
-const SITE_TITLE = "manasgupta.dev"
+const SITE_TITLE = "manasgupta.me"
 
 const SITE_SUBTITLE = packageJson.description
 

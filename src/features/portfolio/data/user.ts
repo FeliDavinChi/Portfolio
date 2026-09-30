@@ -17,7 +17,7 @@ export const USER: User = {
   address: "Hyderabad, India",
   phoneNumberB64: "KzkxODA3NDkyMDI5Ng==", // +918074920296
   emailB64: "bGFrc2htaW1hbmFzQHByb3Rvbi5tZQ==", // lakshmimanas@proton.me
-  website: "https://manasgupta.dev",
+  website: "https://manasgupta.me",
   jobTitle: "Applied AI Engineer",
   jobs: [
     {
@@ -30,12 +30,12 @@ export const USER: User = {
 - **Applied AI Engineer** specializing in deep learning, computer vision, NLP, and modern full-stack web architectures.
 - **3+ years freelance design background** (500+ assets delivered to 350+ global clients), bridging visual communication with software engineering.
 `,
-  avatar: "",
+  avatar: "/avatar.jpg",
   avatarVariants: {
-    lightOff: "",
-    lightOn: "",
-    darkOff: "",
-    darkOn: "",
+    lightOff: "/avatar.jpg",
+    lightOn: "/avatar.jpg",
+    darkOff: "/avatar.jpg",
+    darkOn: "/avatar.jpg",
   },
   ogImage: "/og/simple?title=Manas%20Gupta&description=Applied%20AI%20Engineer",
   namePronunciationUrl: "",

@@ -8,13 +8,13 @@ export const registryConfig = {
   /**
    * URL pattern for resolving namespaced components
    * The {name} placeholder will be replaced with the component name
-   * @example "https://manasgupta.dev/r/{name}.json" resolves to "https://manasgupta.dev/r/wheel-picker.json"
+   * @example "https://manasgupta.me/r/{name}.json" resolves to "https://manasgupta.me/r/wheel-picker.json"
    * This tells shadcn CLI where to fetch component definitions when installing with namespace prefix
    * @see https://ui.shadcn.com/docs/registry/namespace#url-pattern-system
    */
   namespaceUrl:
     process.env.NEXT_PUBLIC_REGISTRY_NAMESPACE_URL ||
-    "https://manasgupta.dev/r/{name}.json",
+    "https://manasgupta.me/r/{name}.json",
 }
 
 export const componentCategories = [

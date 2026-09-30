@@ -1,4 +1,4 @@
-# AI agent guidelines for manasgupta.dev
+# AI agent guidelines for manasgupta.me
 
 Next.js 16 (App Router) portfolio, blog, and shadcn registry website.
 

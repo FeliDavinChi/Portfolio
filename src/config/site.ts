@@ -50,5 +50,5 @@ export const SOURCE_CODE_GITHUB_URL =
 export const SPONSORSHIP_URL = "https://github.com/sponsors/FeliDavinChi"
 
 export const UTM_PARAMS = {
-  utm_source: "manasgupta.dev",
+  utm_source: "manasgupta.me",
 }

@@ -103,7 +103,7 @@ export const Index: Record<string, any> = {`
     {
       $schema: "https://ui.shadcn.com/schema/registry.json",
       name: "manasgupta",
-      homepage: "https://manasgupta.dev/components",
+      homepage: "https://manasgupta.me/components",
       items: publishedItems.map((item) => {
         return {
           ...item,

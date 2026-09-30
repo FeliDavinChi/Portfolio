@@ -1,4 +1,4 @@
-<!-- # [manasgupta.dev](https://manasgupta.dev) -->
+<!-- # [manasgupta.me](https://manasgupta.me) -->
 
 
 A portfolio and personal website showcasing my work as an Applied AI Engineer.

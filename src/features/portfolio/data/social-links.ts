@@ -8,8 +8,8 @@ import type { SocialProfile } from "@/features/portfolio/types/social-links"
 export const SOCIAL = {
   x: {
     title: "X",
-    handle: "@manasgupta",
-    href: "https://x.com/manasgupta",
+    handle: "@FeliDavinChi",
+    href: "https://x.com/FeliDavinChi",
     sameAs: true,
   },
   github: {
@@ -26,19 +26,19 @@ export const SOCIAL = {
   },
   dailydotdev: {
     title: "daily.dev",
-    handle: "@manasgupta",
-    href: "https://app.daily.dev/manasgupta",
+    handle: "@manasgupta09",
+    href: "https://app.daily.dev/manasgupta09",
     sameAs: true,
   },
   discord: {
     title: "Discord",
-    handle: "manasgupta",
-    href: "https://discord.com",
+    handle: "mr.felix0750",
+    href: "https://discord.com/users/mr.felix0750",
   },
   youtube: {
     title: "YouTube",
-    handle: "@manasgupta",
-    href: "https://www.youtube.com/@manasgupta",
+    handle: "@kaxuto.9_",
+    href: "https://www.youtube.com/@kaxuto.9_",
     sameAs: true,
   },
 } satisfies Record<string, SocialProfile>

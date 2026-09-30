@@ -11,7 +11,7 @@ export default function BrandAssetsMenuDemo() {
         logomark={<ManasGuptaMark />}
         logomarkSVG={LOGOMARK_SVG}
         logotypeSVG={LOGOTYPE_SVG}
-        brandGuidelinesURL="https://manasgupta.dev"
+        brandGuidelinesURL="https://manasgupta.me"
         brandAssetsURL="https://assets.chanhdai.com/chanhdai-brand.zip"
       >
         <Link href="/" aria-label="Home">
