@@ -14,7 +14,7 @@ export const SITE_INFO = {
 
 export const LICENSE = {
   name: "MIT License",
-  url: "https://github.com/ncdai/chanhdai.com/blob/main/LICENSE",
+  url: "https://github.com/FeliDavinChi/portfolio/blob/main/LICENSE",
 }
 
 export const META_THEME_COLORS = {
@@ -43,11 +43,12 @@ export const MOBILE_NAV: NavItem<Route>[] = [
 
 export const X_HANDLE = SOCIAL.x.handle
 export const GITHUB_USERNAME = SOCIAL.github.handle
-export const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com"
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com"
+export const SOURCE_CODE_GITHUB_REPO = "FeliDavinChi/portfolio"
+export const SOURCE_CODE_GITHUB_URL =
+  "https://github.com/FeliDavinChi/portfolio"
 
-export const SPONSORSHIP_URL = "https://github.com/sponsors/ncdai"
+export const SPONSORSHIP_URL = "https://github.com/sponsors/FeliDavinChi"
 
 export const UTM_PARAMS = {
-  utm_source: "chanhdai.com",
+  utm_source: "manasgupta.dev",
 }

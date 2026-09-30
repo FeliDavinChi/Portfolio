@@ -17,7 +17,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["controls"],
-    docs: "https://chanhdai.com/components/theme-switcher",
+    docs: "https://manasgupta.dev/components/theme-switcher",
   },
   {
     name: "text-flip",
@@ -34,7 +34,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["text-effects"],
-    docs: "https://chanhdai.com/components/text-flip",
+    docs: "https://manasgupta.dev/components/text-flip",
   },
   {
     name: "apple-hello-effect",
@@ -50,7 +50,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["text-effects"],
-    docs: "https://chanhdai.com/components/apple-hello-effect",
+    docs: "https://manasgupta.dev/components/apple-hello-effect",
   },
   {
     name: "apple-hello-effect-hindi",
@@ -66,7 +66,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["text-effects"],
-    docs: "https://chanhdai.com/components/apple-hello-effect",
+    docs: "https://manasgupta.dev/components/apple-hello-effect",
   },
   {
     name: "apple-hello-effect-spanish",
@@ -82,7 +82,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["text-effects"],
-    docs: "https://chanhdai.com/components/apple-hello-effect",
+    docs: "https://manasgupta.dev/components/apple-hello-effect",
   },
   {
     name: "apple-hello-effect-vietnamese",
@@ -98,7 +98,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["text-effects"],
-    docs: "https://chanhdai.com/components/apple-hello-effect",
+    docs: "https://manasgupta.dev/components/apple-hello-effect",
   },
   {
     name: "swipe-actions",
@@ -115,7 +115,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["controls"],
-    docs: "https://chanhdai.com/components/swipe-actions",
+    docs: "https://manasgupta.dev/components/swipe-actions",
   },
   {
     name: "wheel-picker",
@@ -132,7 +132,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["controls"],
-    docs: "https://chanhdai.com/components/react-wheel-picker",
+    docs: "https://manasgupta.dev/components/react-wheel-picker",
   },
   {
     name: "chevrons-up-down-icon",
@@ -148,7 +148,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["effects"],
-    docs: "https://chanhdai.com/components/chevrons-up-down-icon",
+    docs: "https://manasgupta.dev/components/chevrons-up-down-icon",
   },
   {
     name: "typography",
@@ -206,7 +206,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["marketing"],
-    docs: "https://chanhdai.com/components/work-experience-component",
+    docs: "https://manasgupta.dev/components/work-experience-component",
   },
   {
     name: "shimmering-text",
@@ -222,7 +222,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["text-effects"],
-    docs: "https://chanhdai.com/components/shimmering-text",
+    docs: "https://manasgupta.dev/components/shimmering-text",
   },
   {
     name: "slide-to-unlock",
@@ -240,7 +240,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["controls"],
-    docs: "https://chanhdai.com/components/slide-to-unlock",
+    docs: "https://manasgupta.dev/components/slide-to-unlock",
   },
   {
     name: "testimonials-marquee",
@@ -252,7 +252,7 @@ export const components: Registry["items"] = [
       getRegistryItemUrl("testimonial"),
     ],
     categories: ["marketing"],
-    docs: "https://chanhdai.com/components/testimonials-marquee",
+    docs: "https://manasgupta.dev/components/testimonials-marquee",
   },
   {
     name: "testimonial",
@@ -268,7 +268,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["marketing"],
-    docs: "https://chanhdai.com/components/testimonial",
+    docs: "https://manasgupta.dev/components/testimonial",
   },
   {
     name: "github-stars",
@@ -285,7 +285,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["data-display"],
-    docs: "https://chanhdai.com/components/github-stars",
+    docs: "https://manasgupta.dev/components/github-stars",
   },
   {
     name: "scroll-fade-effect",
@@ -383,7 +383,7 @@ export const components: Registry["items"] = [
       },
     },
     categories: ["effects"],
-    docs: "https://chanhdai.com/components/scroll-fade-effect",
+    docs: "https://manasgupta.dev/components/scroll-fade-effect",
   },
   {
     name: "consent-manager",
@@ -401,7 +401,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["utilities"],
-    docs: "https://chanhdai.com/components/consent-manager",
+    docs: "https://manasgupta.dev/components/consent-manager",
   },
   {
     name: "copy-button",
@@ -424,7 +424,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["utilities"],
-    docs: "https://chanhdai.com/components/copy-button",
+    docs: "https://manasgupta.dev/components/copy-button",
   },
   {
     name: "code-block-command",
@@ -464,7 +464,7 @@ export const components: Registry["items"] = [
       },
     },
     categories: ["data-display"],
-    docs: "https://chanhdai.com/components/code-block-command",
+    docs: "https://manasgupta.dev/components/code-block-command",
   },
   {
     name: "testimonial-spotlight",
@@ -480,7 +480,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["marketing"],
-    docs: "https://chanhdai.com/components/testimonial-spotlight",
+    docs: "https://manasgupta.dev/components/testimonial-spotlight",
   },
   {
     name: "glow-card-grid",
@@ -509,7 +509,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["typography"],
-    docs: "https://chanhdai.com/components/middle-truncation",
+    docs: "https://manasgupta.dev/components/middle-truncation",
   },
   {
     name: "twemoji",
@@ -540,7 +540,7 @@ export const components: Registry["items"] = [
       },
     },
     categories: ["typography"],
-    docs: "https://chanhdai.com/components/twemoji",
+    docs: "https://manasgupta.dev/components/twemoji",
   },
   {
     name: "elastic-slider",
@@ -558,7 +558,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["controls"],
-    docs: "https://chanhdai.com/components/elastic-slider",
+    docs: "https://manasgupta.dev/components/elastic-slider",
   },
   {
     name: "contribution-graph",
@@ -608,7 +608,7 @@ export const components: Registry["items"] = [
       },
     },
     categories: ["data-display"],
-    docs: "https://chanhdai.com/components/github-contributions",
+    docs: "https://manasgupta.dev/components/github-contributions",
   },
   {
     name: "toc-minimap",
@@ -625,7 +625,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["navigation"],
-    docs: "https://chanhdai.com/components/toc-minimap",
+    docs: "https://manasgupta.dev/components/toc-minimap",
   },
   {
     name: "fluid-gradient-text",
@@ -642,7 +642,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["text-effects"],
-    docs: "https://chanhdai.com/components/fluid-gradient-text",
+    docs: "https://manasgupta.dev/components/fluid-gradient-text",
   },
   {
     name: "brand-assets-menu",
@@ -659,7 +659,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["menus"],
-    docs: "https://chanhdai.com/components/brand-assets-menu",
+    docs: "https://manasgupta.dev/components/brand-assets-menu",
   },
   {
     name: "icon-swap",
@@ -675,7 +675,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["effects"],
-    docs: "https://chanhdai.com/components/icon-swap",
+    docs: "https://manasgupta.dev/components/icon-swap",
   },
   {
     name: "dot-grid-spotlight",
@@ -691,7 +691,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["effects"],
-    docs: "https://chanhdai.com/components/dot-grid-spotlight",
+    docs: "https://manasgupta.dev/components/dot-grid-spotlight",
   },
   {
     name: "spinning-circular-text",
@@ -720,7 +720,7 @@ export const components: Registry["items"] = [
       },
     },
     categories: ["text-effects"],
-    docs: "https://chanhdai.com/components/spinning-circular-text",
+    docs: "https://manasgupta.dev/components/spinning-circular-text",
   },
   {
     name: "mobius-loop-icon",
@@ -737,7 +737,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["effects"],
-    docs: "https://chanhdai.com/components/mobius-loop-icon",
+    docs: "https://manasgupta.dev/components/mobius-loop-icon",
   },
   {
     name: "logos-carousel",
@@ -753,7 +753,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["marketing"],
-    docs: "https://chanhdai.com/components/logos-carousel",
+    docs: "https://manasgupta.dev/components/logos-carousel",
   },
   {
     name: "logos-flip",
@@ -770,7 +770,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["marketing"],
-    docs: "https://chanhdai.com/components/logos-flip",
+    docs: "https://manasgupta.dev/components/logos-flip",
   },
   {
     name: "testimonial-2",
@@ -786,7 +786,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["marketing"],
-    docs: "https://chanhdai.com/components/testimonial-2",
+    docs: "https://manasgupta.dev/components/testimonial-2",
   },
   {
     name: "line-nav",
@@ -803,7 +803,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["navigation"],
-    docs: "https://chanhdai.com/components/line-nav",
+    docs: "https://manasgupta.dev/components/line-nav",
   },
   {
     name: "share-menu",
@@ -820,7 +820,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["menus"],
-    docs: "https://chanhdai.com/components/share-menu",
+    docs: "https://manasgupta.dev/components/share-menu",
   },
   {
     name: "spotlight-logo",
@@ -838,7 +838,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["effects"],
-    docs: "https://chanhdai.com/components/spotlight-logo",
+    docs: "https://manasgupta.dev/components/spotlight-logo",
   },
   {
     name: "timescale",
@@ -854,7 +854,7 @@ export const components: Registry["items"] = [
       },
     ],
     categories: ["data-display"],
-    docs: "https://chanhdai.com/components/timescale",
+    docs: "https://manasgupta.dev/components/timescale",
   },
   {
     name: "status-button",
@@ -888,7 +888,7 @@ export const components: Registry["items"] = [
       },
     },
     categories: ["controls"],
-    docs: "https://chanhdai.com/components/status-button",
+    docs: "https://manasgupta.dev/components/status-button",
   },
   {
     name: "carbon-ads",
@@ -917,6 +917,6 @@ export const components: Registry["items"] = [
       },
     },
     categories: ["utilities"],
-    docs: "https://chanhdai.com/components/carbon-ads",
+    docs: "https://manasgupta.dev/components/carbon-ads",
   },
 ]

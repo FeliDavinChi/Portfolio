@@ -43,3 +43,27 @@ next-env.d.ts
 
 # ncdai
 .ncdai
+
+# registry generated files
+registry.json
+registry-stats.json
+src/registry/__blocks__.json
+src/registry/__index__.tsx
+src/registry/transformed/
+public/r/
+
+# IDE and AI Assistants
+.cursor/
+.claude/
+.vscode/
+.agents/
+plans/
+.mcp.json
+
+# duplicate package manager lock files
+package-lock.json
+
+# archives and migrations
+.archive/
+.migration/
+

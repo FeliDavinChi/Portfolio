@@ -1,4 +1,3 @@
-import { Suspense } from "react"
 import type { Metadata } from "next"
 import type { Blog, WithContext } from "schema-dts"
 
@@ -11,9 +10,6 @@ import {
   PageHeadingTagline,
   PageHeadingTitle,
 } from "@/components/page-heading"
-import { PostList } from "@/features/blog/components/post-list"
-import { PostListWithSearch } from "@/features/blog/components/post-list-with-search"
-import { PostSearchInput } from "@/features/blog/components/post-search-input"
 import { getBlogPosts } from "@/features/doc/data/documents"
 
 const title = "Blog"
@@ -94,23 +90,9 @@ export default function Page() {
           </PageHeadingTitle>
         </PageHeading>
 
-        <div className="h-4" />
-
-        <div className="screen-line-top screen-line-bottom p-2">
-          <Suspense
-            fallback={
-              <div className="flex h-9 w-full rounded-lg border border-input dark:bg-input/30" />
-            }
-          >
-            <PostSearchInput />
-          </Suspense>
+        <div className="flex h-64 items-center justify-center p-8 text-muted-foreground">
+          Coming soon...
         </div>
-
-        <Suspense fallback={<PostList posts={allPosts} />}>
-          <PostListWithSearch posts={allPosts} />
-        </Suspense>
-
-        <div className="h-4" />
       </div>
     </>
   )

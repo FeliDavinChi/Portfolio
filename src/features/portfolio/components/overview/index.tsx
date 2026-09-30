@@ -1,5 +1,6 @@
 import { urlToName } from "@/utils/url"
 import {
+  GraduationCapIcon,
   LinkIcon,
   MapPinIcon,
   MarsIcon,
@@ -78,6 +79,15 @@ export function Overview() {
           <IntroItemIcon>{getGenderIcon(USER.gender)}</IntroItemIcon>
           <IntroItemContent aria-label={`Pronouns: ${USER.pronouns}`}>
             {USER.pronouns}
+          </IntroItemContent>
+        </IntroItem>
+
+        <IntroItem>
+          <IntroItemIcon>
+            <GraduationCapIcon />
+          </IntroItemIcon>
+          <IntroItemContent>
+            CS & Data Science @ NGIT & IIT Madras
           </IntroItemContent>
         </IntroItem>
       </PanelContent>

@@ -17,16 +17,12 @@ const content = `# ${SITE_INFO.name}
 - [Intellectual property](${SITE_INFO.url}/intellectual-property.md): Trademarks and copyrights registered under my name.
 - [Components](${SITE_INFO.url}/components.md): Every registry component, with install instructions.
 - [Blocks](${SITE_INFO.url}/blocks.md): Every registry block, grouped by category, with install instructions.
-- [Blog](${SITE_INFO.url}/blog.md): Every blog post, newest first, with publish dates.
-- [Bookmarks](${SITE_INFO.url}/bookmarks.md): Articles, courses, books, references, and tools I recommend.
+${allPosts.length > 0 ? `- [Blog](${SITE_INFO.url}/blog.md): Every blog post, newest first, with publish dates.\n` : ""}- [Bookmarks](${SITE_INFO.url}/bookmarks.md): Articles, courses, books, references, and tools I recommend.
 
 ## Components
 
 ${allComponents.map((item) => `- [${item.metadata.title}](${SITE_INFO.url}/components/${item.slug}.md): ${item.metadata.description}`).join("\n")}
-
-## Blog
-
-${allPosts.map((item) => `- [${item.metadata.title}](${SITE_INFO.url}/blog/${item.slug}.md): ${item.metadata.description}`).join("\n")}
+${allPosts.length > 0 ? `\n## Blog\n\n${allPosts.map((item) => `- [${item.metadata.title}](${SITE_INFO.url}/blog/${item.slug}.md): ${item.metadata.description}`).join("\n")}` : ""}
 `
 
 export const revalidate = false

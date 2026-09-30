@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "theme-toggle-effect-circle-blur",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "Manas Gupta <lakshmimanas@proton.me>",
   "files": [],
   "cssVars": {
     "theme": {
@@ -34,7 +34,7 @@
       }
     }
   },
-  "docs": "https://chanhdai.com/components/theme-toggle-effect",
+  "docs": "https://manasgupta.dev/components/theme-toggle-effect",
   "categories": [
     "effects"
   ],

@@ -1,4 +1,4 @@
-import type { AvatarLightsVariants } from "@/features/portfolio/components/avatar-lights"
+import type { AvatarLightsVariants } from "@/features/portfolio/components/profile-header/avatar-lights"
 
 export type User = {
   firstName: string

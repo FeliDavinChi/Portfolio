@@ -7,38 +7,37 @@ export const USER: User = {
   username: "FeliDavinChi",
   gender: "male",
   pronouns: "he/him",
-  bio: "Building intelligent systems with AI/ML & modern web technologies.",
+  bio: "First-year student pursuing dual degrees in CS & Data Science, and a graduate of IIIT Hyderabad's iHub-Data AI & ML Training Program.",
   flipSentences: [
-    "Building intelligent systems with AI/ML & web tech.",
-    "AI/ML Engineer & Web Developer.",
-    "Passionate about machine learning & sleek web apps.",
+    "Dual-degree student in CS & Data Science.",
+    "iHub-Data IIIT Hyderabad AI/ML Graduate.",
+    "Building intelligent systems with ML & web tech.",
+    "Passionate about deep learning & full-stack development.",
   ],
   address: "Hyderabad, India",
   phoneNumberB64: "KzkxODA3NDkyMDI5Ng==", // +918074920296
   emailB64: "bGFrc2htaW1hbmFzQHByb3Rvbi5tZQ==", // lakshmimanas@proton.me
   website: "https://manasgupta.dev",
-  jobTitle: "AI/ML & Web Development Engineer",
+  jobTitle: "Applied AI Engineer",
   jobs: [
     {
-      title: "AI/ML & Web Development Engineer",
-      company: "Independent Developer",
-      website: "#",
-      experienceId: "dev",
+      title: "Applied AI Engineer",
+      company: "",
+      website: "",
     },
   ],
-  about: `- I’m Manas Gupta — an AI/ML student and Web Developer based in Hyderabad, India.
-- Passionate about machine learning algorithms, deep learning models, and building modern, high-performance web applications.
-- Always exploring cutting-edge technologies to transform complex data into intuitive, impactful digital experiences.
+  about: `- Dual-degree student in **CS & Data Science** (NGIT & IIT Madras) and **iHub-Data IIIT Hyderabad AI/ML** graduate.
+- **Applied AI Engineer** specializing in deep learning, computer vision, NLP, and modern full-stack web architectures.
+- **3+ years freelance design background** (500+ assets delivered to 350+ global clients), bridging visual communication with software engineering.
 `,
-  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
+  avatar: "",
   avatarVariants: {
-    lightOff: "https://assets.chanhdai.com/images/avatar-light-off.webp",
-    lightOn: "https://assets.chanhdai.com/images/avatar-light-on.webp",
-    darkOff: "https://assets.chanhdai.com/images/avatar-dark-off.webp",
-    darkOn: "https://assets.chanhdai.com/images/avatar-dark-on.webp",
+    lightOff: "",
+    lightOn: "",
+    darkOff: "",
+    darkOn: "",
   },
-  ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-dark.png?t=1778602757",
+  ogImage: "/og/simple?title=Manas%20Gupta&description=Applied%20AI%20Engineer",
   namePronunciationUrl: "",
   timeZone: "Asia/Kolkata",
   keywords: [

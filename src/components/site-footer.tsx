@@ -52,20 +52,11 @@ export function SiteFooter() {
           </Item>
 
           <Item>
-            <dt>Analytics</dt>
+            <dt>Focus</dt>
             <dd>
               <ul>
-                <li>
-                  <a
-                    className="link-underline"
-                    href="https://openpanel.dev?utm_source=chanhdai.com&utm_medium=referral&utm_campaign=footer"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    OpenPanel
-                  </a>
-                </li>
-                <li>Google Analytics</li>
+                <li>AI & Machine Learning</li>
+                <li>Full-Stack Web Architectures</li>
               </ul>
             </dd>
           </Item>

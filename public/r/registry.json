@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "ncdai",
-  "homepage": "https://chanhdai.com/components",
+  "name": "manasgupta",
+  "homepage": "https://manasgupta.dev/components",
   "items": [
     {
       "name": "haptic",
@@ -14,12 +14,12 @@
           "target": "@lib/haptic.ts"
         }
       ],
-      "docs": "https://chanhdai.com/components/haptic-feedback",
+      "docs": "https://manasgupta.dev/components/haptic-feedback",
       "categories": [
         "utilities"
       ],
       "type": "registry:lib",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "use-sound",
@@ -43,7 +43,7 @@
         }
       ],
       "type": "registry:hook",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "use-controllable-state",
@@ -56,7 +56,7 @@
         }
       ],
       "type": "registry:hook",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "theme-switcher",
@@ -73,12 +73,12 @@
           "target": "@components/theme-switcher.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/theme-switcher",
+      "docs": "https://manasgupta.dev/components/theme-switcher",
       "categories": [
         "controls"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "text-flip",
@@ -94,12 +94,12 @@
           "target": "@components/text-flip.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/text-flip",
+      "docs": "https://manasgupta.dev/components/text-flip",
       "categories": [
         "text-effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "apple-hello-effect",
@@ -115,12 +115,12 @@
           "target": "@components/apple-hello-effect-english.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/apple-hello-effect",
+      "docs": "https://manasgupta.dev/components/apple-hello-effect",
       "categories": [
         "text-effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "apple-hello-effect-hindi",
@@ -136,12 +136,12 @@
           "target": "@components/apple-hello-effect-hindi.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/apple-hello-effect",
+      "docs": "https://manasgupta.dev/components/apple-hello-effect",
       "categories": [
         "text-effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "apple-hello-effect-spanish",
@@ -157,12 +157,12 @@
           "target": "@components/apple-hello-effect-spanish.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/apple-hello-effect",
+      "docs": "https://manasgupta.dev/components/apple-hello-effect",
       "categories": [
         "text-effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "apple-hello-effect-vietnamese",
@@ -178,12 +178,12 @@
           "target": "@components/apple-hello-effect-vietnamese.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/apple-hello-effect",
+      "docs": "https://manasgupta.dev/components/apple-hello-effect",
       "categories": [
         "text-effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "swipe-actions",
@@ -200,12 +200,12 @@
           "target": "@components/swipe-actions.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/swipe-actions",
+      "docs": "https://manasgupta.dev/components/swipe-actions",
       "categories": [
         "controls"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "wheel-picker",
@@ -221,12 +221,12 @@
           "target": "@components/wheel-picker.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/react-wheel-picker",
+      "docs": "https://manasgupta.dev/components/react-wheel-picker",
       "categories": [
         "controls"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "chevrons-up-down-icon",
@@ -241,12 +241,12 @@
           "target": "@components/chevrons-up-down-icon.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/chevrons-up-down-icon",
+      "docs": "https://manasgupta.dev/components/chevrons-up-down-icon",
       "categories": [
         "effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "typography",
@@ -280,7 +280,7 @@
         "typography"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -304,12 +304,12 @@
           "target": "@components/work-experience.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/work-experience-component",
+      "docs": "https://manasgupta.dev/components/work-experience-component",
       "categories": [
         "marketing"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "shimmering-text",
@@ -325,12 +325,12 @@
           "target": "@components/shimmering-text.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/shimmering-text",
+      "docs": "https://manasgupta.dev/components/shimmering-text",
       "categories": [
         "text-effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "slide-to-unlock",
@@ -349,12 +349,12 @@
           "target": "@components/slide-to-unlock.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/slide-to-unlock",
+      "docs": "https://manasgupta.dev/components/slide-to-unlock",
       "categories": [
         "controls"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "testimonials-marquee",
@@ -364,12 +364,12 @@
         "@kibo-ui/marquee",
         "http://localhost:3000/r/testimonial.json"
       ],
-      "docs": "https://chanhdai.com/components/testimonials-marquee",
+      "docs": "https://manasgupta.dev/components/testimonials-marquee",
       "categories": [
         "marketing"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -383,12 +383,12 @@
           "target": "@components/testimonial.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/testimonial",
+      "docs": "https://manasgupta.dev/components/testimonial",
       "categories": [
         "marketing"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "github-stars",
@@ -405,12 +405,12 @@
           "target": "@components/github-stars.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/github-stars",
+      "docs": "https://manasgupta.dev/components/github-stars",
       "categories": [
         "data-display"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "scroll-fade-effect",
@@ -497,12 +497,12 @@
           "animation-fill-mode": "both"
         }
       },
-      "docs": "https://chanhdai.com/components/scroll-fade-effect",
+      "docs": "https://manasgupta.dev/components/scroll-fade-effect",
       "categories": [
         "effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "consent-manager",
@@ -521,12 +521,12 @@
           "target": "@components/consent-manager.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/consent-manager",
+      "docs": "https://manasgupta.dev/components/consent-manager",
       "categories": [
         "utilities"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "copy-button",
@@ -553,12 +553,12 @@
           "target": "@hooks/use-copy-to-clipboard.ts"
         }
       ],
-      "docs": "https://chanhdai.com/components/copy-button",
+      "docs": "https://manasgupta.dev/components/copy-button",
       "categories": [
         "utilities"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "code-block-command",
@@ -599,12 +599,12 @@
           "code-foreground": "oklch(0.985 0 0)"
         }
       },
-      "docs": "https://chanhdai.com/components/code-block-command",
+      "docs": "https://manasgupta.dev/components/code-block-command",
       "categories": [
         "data-display"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "testimonial-spotlight",
@@ -620,12 +620,12 @@
           "target": "@components/testimonial-spotlight.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/testimonial-spotlight",
+      "docs": "https://manasgupta.dev/components/testimonial-spotlight",
       "categories": [
         "marketing"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "glow-card-grid",
@@ -642,7 +642,7 @@
         "effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "middle-truncation",
@@ -655,12 +655,12 @@
           "target": "@components/middle-truncation.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/middle-truncation",
+      "docs": "https://manasgupta.dev/components/middle-truncation",
       "categories": [
         "typography"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "twemoji",
@@ -689,12 +689,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/twemoji",
+      "docs": "https://manasgupta.dev/components/twemoji",
       "categories": [
         "typography"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "elastic-slider",
@@ -713,12 +713,12 @@
           "target": "@components/elastic-slider.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/elastic-slider",
+      "docs": "https://manasgupta.dev/components/elastic-slider",
       "categories": [
         "controls"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "contribution-graph",
@@ -739,7 +739,7 @@
         "data-display"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "github-contributions",
@@ -770,12 +770,12 @@
           "@apply underline decoration-current/30 decoration-1 underline-offset-3 transition-colors hover:decoration-current": {}
         }
       },
-      "docs": "https://chanhdai.com/components/github-contributions",
+      "docs": "https://manasgupta.dev/components/github-contributions",
       "categories": [
         "data-display"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "toc-minimap",
@@ -792,12 +792,12 @@
           "target": "@components/toc-minimap.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/toc-minimap",
+      "docs": "https://manasgupta.dev/components/toc-minimap",
       "categories": [
         "navigation"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "fluid-gradient-text",
@@ -813,12 +813,12 @@
           "target": "@components/fluid-gradient-text.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/fluid-gradient-text",
+      "docs": "https://manasgupta.dev/components/fluid-gradient-text",
       "categories": [
         "text-effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "brand-assets-menu",
@@ -838,12 +838,12 @@
           "target": "@components/brand-assets-menu.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/brand-assets-menu",
+      "docs": "https://manasgupta.dev/components/brand-assets-menu",
       "categories": [
         "menus"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "icon-swap",
@@ -859,12 +859,12 @@
           "target": "@components/icon-swap.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/icon-swap",
+      "docs": "https://manasgupta.dev/components/icon-swap",
       "categories": [
         "effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "dot-grid-spotlight",
@@ -877,12 +877,12 @@
           "target": "@components/dot-grid-spotlight.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/dot-grid-spotlight",
+      "docs": "https://manasgupta.dev/components/dot-grid-spotlight",
       "categories": [
         "effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "spinning-circular-text",
@@ -907,12 +907,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/spinning-circular-text",
+      "docs": "https://manasgupta.dev/components/spinning-circular-text",
       "categories": [
         "text-effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "mobius-loop-icon",
@@ -928,12 +928,12 @@
           "target": "@components/mobius-loop-icon.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/mobius-loop-icon",
+      "docs": "https://manasgupta.dev/components/mobius-loop-icon",
       "categories": [
         "effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "logos-carousel",
@@ -949,12 +949,12 @@
           "target": "@components/logos-carousel.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/logos-carousel",
+      "docs": "https://manasgupta.dev/components/logos-carousel",
       "categories": [
         "marketing"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "logos-flip",
@@ -970,12 +970,12 @@
           "target": "@components/logos-flip.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/logos-flip",
+      "docs": "https://manasgupta.dev/components/logos-flip",
       "categories": [
         "marketing"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "testimonial-2",
@@ -988,12 +988,12 @@
           "target": "@components/testimonial-2.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/testimonial-2",
+      "docs": "https://manasgupta.dev/components/testimonial-2",
       "categories": [
         "marketing"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "line-nav",
@@ -1009,12 +1009,12 @@
           "target": "@components/line-nav.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/line-nav",
+      "docs": "https://manasgupta.dev/components/line-nav",
       "categories": [
         "navigation"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "share-menu",
@@ -1032,12 +1032,12 @@
           "target": "@components/share-menu.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/share-menu",
+      "docs": "https://manasgupta.dev/components/share-menu",
       "categories": [
         "menus"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "spotlight-logo",
@@ -1056,12 +1056,12 @@
           "target": "@components/spotlight-logo.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/spotlight-logo",
+      "docs": "https://manasgupta.dev/components/spotlight-logo",
       "categories": [
         "effects"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "timescale",
@@ -1074,12 +1074,12 @@
           "target": "@components/timescale.tsx"
         }
       ],
-      "docs": "https://chanhdai.com/components/timescale",
+      "docs": "https://manasgupta.dev/components/timescale",
       "categories": [
         "data-display"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "status-button",
@@ -1114,12 +1114,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/status-button",
+      "docs": "https://manasgupta.dev/components/status-button",
       "categories": [
         "controls"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "carbon-ads",
@@ -1144,12 +1144,12 @@
           "@apply text-xs text-muted-foreground/80 opacity-100": {}
         }
       },
-      "docs": "https://chanhdai.com/components/carbon-ads",
+      "docs": "https://manasgupta.dev/components/carbon-ads",
       "categories": [
         "utilities"
       ],
       "type": "registry:component",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "login-01",
@@ -1181,7 +1181,7 @@
         "application"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "hero-01",
@@ -1210,7 +1210,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "blog-01",
@@ -1241,7 +1241,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "blog-02",
@@ -1273,7 +1273,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "testimonials-01",
@@ -1303,7 +1303,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "testimonials-02",
@@ -1334,7 +1334,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "experience-01",
@@ -1358,7 +1358,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "team-01",
@@ -1382,7 +1382,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "metrics-01",
@@ -1415,7 +1415,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "social-links-01",
@@ -1439,7 +1439,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "social-proof-01",
@@ -1463,7 +1463,7 @@
         "marketing"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "not-found-01",
@@ -1563,7 +1563,7 @@
         "application"
       ],
       "type": "registry:block",
-      "author": "ncdai <dai@chanhdai.com>"
+      "author": "Manas Gupta <lakshmimanas@proton.me>"
     },
     {
       "name": "style",
@@ -1581,7 +1581,7 @@
         }
       },
       "type": "registry:style",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -1613,12 +1613,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/theme-toggle-effect",
+      "docs": "https://manasgupta.dev/components/theme-toggle-effect",
       "categories": [
         "effects"
       ],
       "type": "registry:style",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -1650,12 +1650,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/theme-toggle-effect",
+      "docs": "https://manasgupta.dev/components/theme-toggle-effect",
       "categories": [
         "effects"
       ],
       "type": "registry:style",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -1687,12 +1687,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/theme-toggle-effect",
+      "docs": "https://manasgupta.dev/components/theme-toggle-effect",
       "categories": [
         "effects"
       ],
       "type": "registry:style",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -1728,12 +1728,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/theme-toggle-effect",
+      "docs": "https://manasgupta.dev/components/theme-toggle-effect",
       "categories": [
         "effects"
       ],
       "type": "registry:style",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -1768,12 +1768,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/theme-toggle-effect",
+      "docs": "https://manasgupta.dev/components/theme-toggle-effect",
       "categories": [
         "effects"
       ],
       "type": "registry:style",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -1820,12 +1820,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/theme-toggle-effect",
+      "docs": "https://manasgupta.dev/components/theme-toggle-effect",
       "categories": [
         "effects"
       ],
       "type": "registry:style",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -1859,12 +1859,12 @@
           }
         }
       },
-      "docs": "https://chanhdai.com/components/theme-toggle-effect",
+      "docs": "https://manasgupta.dev/components/theme-toggle-effect",
       "categories": [
         "effects"
       ],
       "type": "registry:style",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     },
     {
@@ -1888,7 +1888,7 @@
         }
       },
       "type": "registry:style",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Manas Gupta <lakshmimanas@proton.me>",
       "files": []
     }
   ]

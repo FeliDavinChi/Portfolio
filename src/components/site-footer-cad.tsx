@@ -12,9 +12,7 @@ import { SOCIAL } from "@/features/portfolio/data/social-links"
 // Imported here rather than through `@/config/site`, which client components
 // pull in, to keep the manifest out of client bundles.
 import packageJson from "../../package.json"
-// Precomputed by `pnpm registry:build`, so the count costs no registry import.
-import registryStats from "../../registry-stats.json"
-import { ChanhDaiMark } from "./chanhdai-mark"
+import { ManasGuptaMark } from "./manasgupta-mark"
 
 const INSPIRED_BY = [
   "Tailwind CSS",
@@ -64,11 +62,11 @@ export function SiteFooterCad() {
             <Field label="Crafted by">
               <a
                 className="link-underline"
-                href={xLink.href}
+                href={githubLink.href}
                 target="_blank"
                 rel="noopener"
               >
-                {xLink.handle}
+                @{githubLink.handle}
               </a>
             </Field>
 
@@ -80,38 +78,22 @@ export function SiteFooterCad() {
               <time dateTime={build.date}>{build.date}</time>
             </Field>
 
-            <Field label="Registry">{registryStats.total} items</Field>
+            <Field label="Role">Applied AI Engineer</Field>
 
-            <Field label="Deployed on">
-              <span className="font-sans" aria-hidden>
-                ▲
-              </span>
-              <span className="sr-only">Vercel</span>
-            </Field>
+            <Field label="Location">Hyderabad, India</Field>
 
-            <Field label="Source code">
+            <Field label="Time Zone">IST (UTC+05:30)</Field>
+
+            <Field label="Status">Open for Work</Field>
+
+            <Field label="Contact">
               <a
                 className="link-underline"
-                href={SOURCE_CODE_GITHUB_URL}
-                target="_blank"
-                rel="noopener"
+                href="mailto:lakshmimanas@proton.me"
               >
-                GitHub
+                Email
               </a>
             </Field>
-
-            <Field label="License">
-              <a
-                className="link-underline"
-                href={LICENSE.url}
-                target="_blank"
-                rel="noopener"
-              >
-                {LICENSE.name}
-              </a>
-            </Field>
-
-            <Field label="Typeface">Geist</Field>
 
             <Field className="col-span-2" label="Stack">
               <ul className="flex flex-col gap-0.5">
@@ -121,19 +103,10 @@ export function SiteFooterCad() {
               </ul>
             </Field>
 
-            <Field className="col-span-2" label="Analytics">
+            <Field className="col-span-2" label="Focus">
               <ul className="flex flex-col gap-0.5">
-                <li>
-                  <a
-                    className="link-underline"
-                    href={OPENPANEL_URL}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    OpenPanel
-                  </a>
-                </li>
-                <li>Google Analytics</li>
+                <li>AI & Machine Learning</li>
+                <li>Full-Stack Web Architectures</li>
               </ul>
             </Field>
 
@@ -169,7 +142,7 @@ export function SiteFooterCad() {
             className="mr-auto text-muted-foreground transition-[color] hover:text-foreground"
             aria-label="Home"
           >
-            <ChanhDaiMark className="h-4" />
+            <ManasGuptaMark className="h-4" />
           </Link>
 
           <a

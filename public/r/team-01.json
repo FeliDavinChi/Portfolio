@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "team-01",
   "title": "Team 01",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "Manas Gupta <lakshmimanas@proton.me>",
   "description": "A team section with glowing cards.",
   "registryDependencies": [
     "http://localhost:3000/r/glow-card-grid.json"
@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/registry/blocks/team-01/team-01.tsx",
-      "content": "import { GlowCard, GlowCardGrid } from \"@/registry/components/glow-card-grid\"\r\n\r\nexport default function Team01() {\r\n  return (\r\n    <div className=\"container px-4 py-8\">\r\n      <GlowCardGrid className=\"lg:grid-cols-4\">\r\n        {CARDS.map((card) => (\r\n          <GlowCard\r\n            key={card.name}\r\n            name={card.name}\r\n            handle={card.handle}\r\n            avatar={card.avatar}\r\n          />\r\n        ))}\r\n      </GlowCardGrid>\r\n    </div>\r\n  )\r\n}\r\n\r\nconst CARDS = [\r\n  {\r\n    name: \"shadcn\",\r\n    handle: \"@shadcn\",\r\n    avatar: \"https://unavatar.io/x/shadcn\",\r\n  },\r\n  {\r\n    name: \"Evil Rabbit\",\r\n    handle: \"@evilrabbit_\",\r\n    avatar: \"https://unavatar.io/x/evilrabbit_\",\r\n  },\r\n  {\r\n    name: \"OrcDev\",\r\n    handle: \"@orcdev\",\r\n    avatar: \"https://unavatar.io/x/orcdev\",\r\n  },\r\n  {\r\n    name: \"David Haz\",\r\n    handle: \"@davidhdev\",\r\n    avatar: \"https://unavatar.io/x/davidhdev\",\r\n  },\r\n  {\r\n    name: \"Shu\",\r\n    handle: \"@shuding\",\r\n    avatar: \"https://unavatar.io/x/shuding\",\r\n  },\r\n  {\r\n    name: \"Emil Kowalski\",\r\n    handle: \"@emilkowalski\",\r\n    avatar: \"https://unavatar.io/x/emilkowalski\",\r\n  },\r\n  {\r\n    name: \"Aaron\",\r\n    handle: \"@aaronmahlke\",\r\n    avatar: \"https://unavatar.io/x/aaronmahlke\",\r\n  },\r\n  {\r\n    name: \"Chánh Đại\",\r\n    handle: \"@iamncdai\",\r\n    avatar: \"https://unavatar.io/x/iamncdai\",\r\n  },\r\n]\r\n",
+      "content": "import { GlowCard, GlowCardGrid } from \"@/registry/components/glow-card-grid\"\n\nexport default function Team01() {\n  return (\n    <div className=\"container px-4 py-8\">\n      <GlowCardGrid className=\"lg:grid-cols-4\">\n        {CARDS.map((card) => (\n          <GlowCard\n            key={card.name}\n            name={card.name}\n            handle={card.handle}\n            avatar={card.avatar}\n          />\n        ))}\n      </GlowCardGrid>\n    </div>\n  )\n}\n\nconst CARDS = [\n  {\n    name: \"shadcn\",\n    handle: \"@shadcn\",\n    avatar: \"https://unavatar.io/x/shadcn\",\n  },\n  {\n    name: \"Evil Rabbit\",\n    handle: \"@evilrabbit_\",\n    avatar: \"https://unavatar.io/x/evilrabbit_\",\n  },\n  {\n    name: \"OrcDev\",\n    handle: \"@orcdev\",\n    avatar: \"https://unavatar.io/x/orcdev\",\n  },\n  {\n    name: \"David Haz\",\n    handle: \"@davidhdev\",\n    avatar: \"https://unavatar.io/x/davidhdev\",\n  },\n  {\n    name: \"Shu\",\n    handle: \"@shuding\",\n    avatar: \"https://unavatar.io/x/shuding\",\n  },\n  {\n    name: \"Emil Kowalski\",\n    handle: \"@emilkowalski\",\n    avatar: \"https://unavatar.io/x/emilkowalski\",\n  },\n  {\n    name: \"Aaron\",\n    handle: \"@aaronmahlke\",\n    avatar: \"https://unavatar.io/x/aaronmahlke\",\n  },\n  {\n    name: \"Chánh Đại\",\n    handle: \"@iamncdai\",\n    avatar: \"https://unavatar.io/x/iamncdai\",\n  },\n]\n",
       "type": "registry:component",
       "target": "@components/team-01.tsx"
     }
