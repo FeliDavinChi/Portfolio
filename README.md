@@ -3,7 +3,7 @@
 
 A portfolio and personal website showcasing my work as an Applied AI Engineer.
 
-→ Live site: [manasgupta.dev](https://manasgupta.me)
+→ Live site: [manasgupta.me](https://manasgupta.me)
 
 
 ## Overview
