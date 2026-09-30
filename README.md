@@ -1,8 +1,5 @@
 <!-- # [manasgupta.dev](https://manasgupta.dev) -->
 
-<p>
-  <a href="https://github.com/FeliDavinChi/portfolio"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/github/FeliDavinChi/portfolio/license.svg?variant=outline&amp;font=geist" /><img alt="license" src="https://shieldcn.dev/github/FeliDavinChi/portfolio/license.svg?variant=outline&amp;mode=light&amp;font=geist" /></picture></a>
-</p>
 
 A portfolio and personal website showcasing my work as an Applied AI Engineer.
 
