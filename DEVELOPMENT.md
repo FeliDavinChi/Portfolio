@@ -15,7 +15,7 @@ Ensure you have the following installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/FeliDavinChi/portfolio.git portfolio
+git clone https://github.com/FeliDavinChi/Portfolio.git portfolio
 cd portfolio
 ```
 
@@ -79,35 +79,3 @@ pnpm registry:validate
 
 This project utilizes **shadcn Registry**, which allows you to manage and distribute custom components, hooks, pages, and other files across multiple React projects. By hosting a registry, you can reuse UI components easily without manually copying code between projects.
 
-### Using registry in other React projects
-
-If you're working on a different React project and want to reuse the custom components from this repository, visit [manasgupta.dev/components](https://manasgupta.dev/components) for installation instructions and component documentation.
-
-> Note: These components are compatible with [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) and [React 19](https://react.dev/blog/2024/12/05/react-19).
-
-### Registry configuration
-
-Documentation: [shadcn registry docs](https://ui.shadcn.com/docs/registry)
-
-Source files:
-
-- `./src/registry`
-
-Before using the registry, run the following command to build and generate the registry JSON files:
-
-```bash
-pnpm registry:build
-```
-
-When running the `npx shadcn add <registry-url>` command, the selected component will be automatically downloaded and integrated into your project.
-
-## Screenshots
-
-The site screenshots are captured locally, then published to Cloudflare R2.
-
-```bash
-pnpm capture       # Capture screenshots into .ncdai/screenshots
-pnpm capture:sync  # Upload the folder to Cloudflare R2
-```
-
-`pnpm capture:sync` requires the `R2_*` variables from `.env.example`. It mirrors the local folder structure into the bucket (skipping dotfiles), overwriting existing files but never deleting remote ones.
