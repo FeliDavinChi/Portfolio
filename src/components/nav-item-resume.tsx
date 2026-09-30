@@ -1,5 +1,3 @@
-import { FileText } from "lucide-react"
-
 import { Button } from "@/components/base/ui/button"
 import {
   Tooltip,
@@ -13,7 +11,7 @@ export function NavItemResume() {
       <TooltipTrigger
         render={
           <Button
-            className="gap-1.5 border-none px-2 text-xs font-medium"
+            className="border-none px-2 text-xs font-medium"
             variant="ghost"
             size="sm"
             nativeButton={false}
@@ -24,7 +22,6 @@ export function NavItemResume() {
                 rel="noopener noreferrer"
                 aria-label="View Resume"
               >
-                <FileText className="size-3.5" aria-hidden="true" />
                 <span>Resume</span>
               </a>
             }
