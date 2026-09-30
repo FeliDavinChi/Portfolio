@@ -5,7 +5,7 @@ import { MAIN_NAV } from "@/config/site"
 import { Separator } from "@/components/base/ui/separator"
 import { ManasGuptaMark } from "@/components/manasgupta-mark"
 import { NavDesktop } from "@/components/nav-desktop"
-import { NavItemGitHub } from "@/components/nav-item-github"
+import { NavItemResume } from "@/components/nav-item-resume"
 import { ThemeToggle } from "@/components/theme-toggle"
 import blocks from "@/registry/__blocks__.json"
 import { BOOKMARKS } from "@/features/bookmark/data"
@@ -65,7 +65,7 @@ export function SiteHeader() {
             orientation="vertical"
             className="mx-2 max-sm:hidden data-vertical:h-5 data-vertical:self-center"
           />
-          <NavItemGitHub />
+          <NavItemResume />
           <Separator
             orientation="vertical"
             className="mx-2 data-vertical:h-5 data-vertical:self-center"
