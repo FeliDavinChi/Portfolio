@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic"
 
+import { LiquidPreloader } from "@/components/liquid-preloader"
 import { SiteBottomNav } from "@/components/site-bottom-nav"
 import { SiteFooterCad } from "@/components/site-footer-cad"
 import { SiteHeader } from "@/components/site-header"
@@ -14,6 +15,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     // - https://base-ui.com/react/overview/quick-start#portals
     // - https://base-ui.com/react/overview/quick-start#ios-26-safari
     <div className="group/layout relative isolate">
+      <LiquidPreloader />
       <SiteHeader />
       <main className="max-w-screen overflow-x-clip px-2">{children}</main>
       <SiteFooterCad />
