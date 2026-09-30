@@ -2,7 +2,12 @@ import { readFileSync } from "node:fs"
 import { join } from "node:path"
 import { ImageResponse } from "next/og"
 
-import { clampParam } from "../params"
+export const alt = "Manas Gupta – Applied AI Engineer"
+export const size = {
+  width: 1200,
+  height: 630,
+}
+export const contentType = "image/png"
 
 const geistSemiBold = readFileSync(
   join(process.cwd(), "src/assets/fonts/Geist-SemiBold.ttf")
@@ -25,19 +30,7 @@ try {
   avatarBase64 = ""
 }
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url)
-
-  const rawTitle = searchParams.get("title")
-  const title = clampParam(rawTitle, 160)
-  const description = clampParam(searchParams.get("description"), 320)
-
-  const isDefaultProfile =
-    !rawTitle ||
-    rawTitle === "Manas Gupta" ||
-    rawTitle === "Manas Gupta – Applied AI Engineer" ||
-    rawTitle === "Portfolio"
-
+export default async function Image() {
   return new ImageResponse(
     <div
       style={{
@@ -198,13 +191,13 @@ export async function GET(request: Request) {
               style={{
                 fontFamily: "GeistSans",
                 fontWeight: 600,
-                fontSize: isDefaultProfile ? "54px" : "44px",
+                fontSize: "54px",
                 lineHeight: "1.15",
                 color: "#ffffff",
                 letterSpacing: "-0.025em",
               }}
             >
-              {isDefaultProfile ? "Manas Gupta" : title}
+              Manas Gupta
             </div>
 
             <div
@@ -217,9 +210,7 @@ export async function GET(request: Request) {
                 letterSpacing: "-0.01em",
               }}
             >
-              {isDefaultProfile
-                ? "Applied AI Engineer & CS / Data Science Student"
-                : description || "Applied AI Engineer · manasgupta.me"}
+              Applied AI Engineer & CS / Data Science Student
             </div>
 
             <div
@@ -232,9 +223,9 @@ export async function GET(request: Request) {
                 maxWidth: "780px",
               }}
             >
-              {isDefaultProfile
-                ? "Dual-degree student in CS & Data Science (NGIT & IIT Madras) · IIIT Hyderabad AI/ML Graduate · Building intelligent systems with ML & modern web tech."
-                : "Explore interactive projects, case studies, and engineering insights on manasgupta.me"}
+              Dual-degree student in CS & Data Science (NGIT & IIT Madras) ·
+              IIIT Hyderabad AI/ML Graduate · Building intelligent systems with
+              ML & modern web tech.
             </div>
           </div>
         </div>
@@ -300,8 +291,7 @@ export async function GET(request: Request) {
       </div>
     </div>,
     {
-      width: 1200,
-      height: 630,
+      ...size,
       fonts: [
         {
           name: "GeistSans",
