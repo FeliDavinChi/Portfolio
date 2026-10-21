@@ -1,81 +1,35 @@
 # Development
 
-This guide provides instructions on how to set up and run the project locally.
+## Set up the local site
 
-## Prerequisites
+Use the Node.js version pinned in [`.nvmrc`](.nvmrc) and pnpm 9 or later. The package requirements and script definitions live in [`package.json`](package.json).
 
-Ensure you have the following installed:
-
-- [Node.js](https://nodejs.org/) (Latest LTS version recommended)
-- [pnpm](https://pnpm.io/)
-- [Git](https://git-scm.com/)
-
-## Setup
-
-### 1. Clone the repository
-
-```bash
+```sh
 git clone https://github.com/FeliDavinChi/Portfolio.git portfolio
 cd portfolio
-```
-
-### 2. Install portless
-
-Documentation: [port1355.dev](https://port1355.dev)
-
-```bash
-npm install -g portless
-```
-
-### 3. Install dependencies
-
-```bash
-pnpm i
-```
-
-### 4. Configure Environment Variables
-
-Create a `.env.local` file based on `.env.example`:
-
-```bash
-cp .env.example .env.local
-```
-
-Then, update the necessary environment variables inside `.env.local`.
-
-### 5. Run the development server
-
-```bash
+pnpm install
 pnpm dev
 ```
 
-The application should now be available at https://ncdai.localhost
+Open the URL printed by Next.js. To use a different origin in site metadata, optionally add `NEXT_PUBLIC_APP_URL` to `.env.local` and restart the server. The setting overrides the profile website through [`SITE_INFO`](src/config/site.ts). The address to open for local development still comes from the server output.
 
-## Building for Production
+## Run checks from the repository root
 
-```bash
-pnpm build
-```
-
-After building, start the application with:
-
-```bash
-NODE_ENV=production pnpm start
-```
-
-## Before pushing
-
-CI runs these on every push and PR. Run them locally first:
-
-```bash
+```sh
 pnpm lint
 pnpm format:check
-pnpm build
 pnpm check-types
-pnpm registry:validate
+pnpm test:run
 ```
 
-## Registry
+Use `pnpm test` for Vitest's interactive runner. To check a single Markdown file with the repository's formatting rules, pass its path to `pnpm exec prettier --check`.
 
-This project utilizes **shadcn Registry**, which allows you to manage and distribute custom components, hooks, pages, and other files across multiple React projects. By hosting a registry, you can reuse UI components easily without manually copying code between projects.
+## Preview the production build
 
+```sh
+pnpm build
+pnpm registry:validate
+pnpm start
+```
+
+`pnpm build` generates the shadcn registry before building Next.js. Run registry validation after generation because it reads `public/r/registry.json`. `pnpm preview` runs registry generation, the Next.js build, and the production server in one command. Run validation separately when using that shortcut.

@@ -29,6 +29,8 @@ pnpm dev
 
 Open the local URL printed by Next.js. To override the portfolio’s public URL in a local environment, set `NEXT_PUBLIC_APP_URL` in `.env.local`. Site metadata otherwise uses the website URL in the profile data.
 
+The [development guide](DEVELOPMENT.md) covers toolchain setup and production previews.
+
 ### Build and checks
 
 | Command | Purpose |
