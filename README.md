@@ -1,10 +1,8 @@
-<!-- # [manasgupta.me](https://manasgupta.me) -->
+# Manas Gupta’s portfolio
 
+A personal website for my work as an Applied AI Engineer, with project and experience details, writing, and a reusable component registry.
 
-A portfolio and personal website showcasing my work as an Applied AI Engineer.
-
-→ Live site: [manasgupta.me](https://manasgupta.me)
-
+[Visit manasgupta.me](https://manasgupta.me)
 
 ## Overview
 
