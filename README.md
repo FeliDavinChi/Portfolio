@@ -8,9 +8,9 @@ A personal website for my work as an Applied AI Engineer, with project and exper
 
 ### Stack
 
-- Next.js 16
-- Tailwind CSS v4
-- shadcn/ui
+- Next.js 16 App Router and TypeScript
+- Tailwind CSS v4 and shadcn/ui
+- pnpm for dependencies and project scripts
 
 ### Featured
 
