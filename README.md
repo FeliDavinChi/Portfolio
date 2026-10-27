@@ -40,7 +40,13 @@ Open the local URL printed by Next.js. To override the portfolio’s public URL 
 | `pnpm build` | Generate the registry and build the Next.js app. |
 | `pnpm start` | Serve the production build. |
 
-### Content
+## Portfolio data
+
+- Edit the profile in [`user.ts`](src/features/portfolio/data/user.ts), the project list in [`projects.tsx`](src/features/portfolio/data/projects.tsx), and work history in [`experiences.tsx`](src/features/portfolio/data/experiences.tsx).
+- Update social profiles in [`social-links.ts`](src/features/portfolio/data/social-links.ts) and site metadata in [`site.ts`](src/config/site.ts).
+- Replace the published [avatar](public/avatar.jpg) and [résumé](public/resume.pdf) in `public/` when updating those assets.
+
+## Content
 
 Centralized document system powered by MDX:
 
