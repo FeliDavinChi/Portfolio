@@ -18,6 +18,17 @@ A personal website for my work as an Applied AI Engineer, with project and exper
 - An [installable web app manifest](src/app/manifest.webmanifest) and [OpenPanel integration](src/lib/openpanel.ts).
 - Search and sharing metadata, including [JSON-LD](src/config/json-ld.ts), the [sitemap](src/app/sitemap.ts), [robots directives](src/app/robots.ts), and [Open Graph images](src/app/opengraph-image.tsx).
 
+## Local development
+
+Use the Node.js version in [`.nvmrc`](.nvmrc) and pnpm 9 or later. From the repository root:
+
+```sh
+pnpm install
+pnpm dev
+```
+
+Open the local URL printed by Next.js. To override the portfolio’s public URL in a local environment, set `NEXT_PUBLIC_APP_URL` in `.env.local`. Site metadata otherwise uses the website URL in the profile data.
+
 ### Content
 
 Centralized document system powered by MDX:
