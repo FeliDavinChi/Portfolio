@@ -12,16 +12,11 @@ A personal website for my work as an Applied AI Engineer, with project and exper
 - Tailwind CSS v4 and shadcn/ui
 - pnpm for dependencies and project scripts
 
-### Featured
+### Site features
 
-- Clean & modern design
-- Light/Dark themes
-- vCard integration
-- SEO optimized ([JSON-LD schema](https://json-ld.org), sitemap, robots)
-- AI-ready with [/llms.txt](https://llmstxt.org)
-- Spam-protected email
-- Installable as PWA
-- Analytics with [OpenPanel](https://openpanel.dev)
+- Light and dark themes, a [vCard download](src/app/vcard/route.ts), and spam-protected email.
+- An [installable web app manifest](src/app/manifest.webmanifest) and [OpenPanel integration](src/lib/openpanel.ts).
+- Search and sharing metadata, including [JSON-LD](src/config/json-ld.ts), the [sitemap](src/app/sitemap.ts), [robots directives](src/app/robots.ts), and [Open Graph images](src/app/opengraph-image.tsx).
 
 ### Content
 
