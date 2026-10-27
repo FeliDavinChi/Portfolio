@@ -29,6 +29,17 @@ pnpm dev
 
 Open the local URL printed by Next.js. To override the portfolio’s public URL in a local environment, set `NEXT_PUBLIC_APP_URL` in `.env.local`. Site metadata otherwise uses the website URL in the profile data.
 
+### Build and checks
+
+| Command | Purpose |
+| --- | --- |
+| `pnpm lint` | Run ESLint. |
+| `pnpm format:check` | Check formatting with Prettier. |
+| `pnpm check-types` | Run the TypeScript check. |
+| `pnpm test:run` | Run the Vitest suite once. |
+| `pnpm build` | Generate the registry and build the Next.js app. |
+| `pnpm start` | Serve the production build. |
+
 ### Content
 
 Centralized document system powered by MDX:
