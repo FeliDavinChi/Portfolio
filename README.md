@@ -48,14 +48,9 @@ Open the local URL printed by Next.js. To override the portfolio’s public URL 
 
 ## Content
 
-Centralized document system powered by MDX:
+The MDX content layer handles documents by category. Component documentation lives in [`src/features/doc/content/components/`](src/features/doc/content/components), and the [document loader](src/features/doc/data/documents.ts) is the entry point for reading those files. The rendered documentation includes syntax-highlighted code blocks.
 
-- Unified content layer for blog posts and component docs
-- Category-based content organization
-- Raw `.md` endpoints for AI readability
-- Syntax highlighting with code blocks
-- Dynamic OG images for rich link previews
-- RSS feed for content distribution
+Machine-readable content is available through `/llms.txt`, `/about.md`, `/projects.md`, `/blog.md`, and `/components.md`. The registry also exposes RSS feeds at `/blocks/rss` and `/components/rss`.
 
 ### Registry
 
