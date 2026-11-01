@@ -52,15 +52,9 @@ The MDX content layer handles documents by category. Component documentation liv
 
 Machine-readable content is available through `/llms.txt`, `/about.md`, `/projects.md`, `/blog.md`, and `/components.md`. The registry also exposes RSS feeds at `/blocks/rss` and `/components/rss`.
 
-### Registry
+## Component registry
 
-Easily build and distribute reusable components, hooks, and pages using a custom registry powered by the [shadcn CLI](https://ui.shadcn.com/docs/cli).
-
-Each entry is well-documented and includes:
-
-- Live preview & code snippets
-- Beautiful, readable code blocks
-- One-click command blocks (pnpm, npm, yarn, bun)
+The [shadcn CLI](https://ui.shadcn.com/docs/cli) registry distributes reusable UI, including components, hooks, and page blocks. Start in [`src/registry/index.ts`](src/registry/index.ts) and follow the category to its item definitions. Preview implementations live in [`src/registry/examples/`](src/registry/examples). Component documentation provides live examples, source snippets, and install commands for pnpm, npm, Yarn, and Bun.
 
 ## Contributors
 
