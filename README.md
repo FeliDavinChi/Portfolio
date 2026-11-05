@@ -56,6 +56,8 @@ Machine-readable content is available through `/llms.txt`, `/about.md`, `/projec
 
 The [shadcn CLI](https://ui.shadcn.com/docs/cli) registry distributes reusable UI, including components, hooks, and page blocks. Start in [`src/registry/index.ts`](src/registry/index.ts) and follow the category to its item definitions. Preview implementations live in [`src/registry/examples/`](src/registry/examples). Component documentation provides live examples, source snippets, and install commands for pnpm, npm, Yarn, and Bun.
 
+Generate registry assets with `pnpm registry:build`, then validate the generated `public/r/registry.json` with `pnpm registry:validate`. The production build also runs the registry generation step.
+
 ## Contributors
 
 <p>
