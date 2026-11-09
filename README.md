@@ -60,6 +60,8 @@ Generate registry assets with `pnpm registry:build`, then validate the generated
 
 ## Contributors
 
+See the [Code of Conduct](CODE_OF_CONDUCT.md) for participation guidelines and the [Trademark Policy](TRADEMARK.md) for use of project branding.
+
 <p>
   <a href="https://github.com/FeliDavinChi/portfolio/graphs/contributors"><picture><source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/contributors/FeliDavinChi/portfolio.svg?title=false&amp;size=48&amp;align=left&amp;mode=dark&amp;font=geist&amp;watermark=true" /><img alt="contributors" src="https://shieldcn.dev/contributors/FeliDavinChi/portfolio.svg?title=false&amp;size=48&amp;align=left&amp;mode=light&amp;font=geist&amp;watermark=true" /></picture></a>
 </p>
