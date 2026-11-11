@@ -18,3 +18,11 @@
 
 - When changing the canonical origin or profile summary, review the page metadata, [JSON-LD configuration](../src/config/json-ld.ts), and [sitemap](../src/app/sitemap.ts). Verify the resulting URLs in the production preview for the intended origin.
 - When editing navigation, update `MAIN_NAV` for shared destinations and `MOBILE_NAV` for mobile-specific entries. `MOBILE_NAV` adds Home before the entries in `MAIN_NAV`. Confirm the Projects link reaches the homepage section and Blog opens `/blog` from desktop and mobile navigation.
+
+## Replace public assets
+
+The [avatar](../public/avatar.jpg) and [résumé](../public/resume.pdf) are stored under [`public/`](../public) and served at `/avatar.jpg` and `/resume.pdf`. Replace them in place to keep those URLs. If a filename changes, search for references to the old filename before removing it.
+
+- Open the profile after replacing the avatar. Check the crop at narrow and wide widths and confirm the image still loads when requested directly.
+- Open the new PDF from the site's résumé link. Confirm the document opens, contains the intended revision, and has working links.
+- Use the [Trademark Policy](../TRADEMARK.md) when making changes to public branding. Check image previews and the site icon after changing identity assets.
