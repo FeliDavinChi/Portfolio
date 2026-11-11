@@ -33,3 +33,10 @@ pnpm start
 ```
 
 `pnpm build` generates the shadcn registry before building Next.js. Run registry validation after generation because it reads `public/r/registry.json`. `pnpm preview` runs registry generation, the Next.js build, and the production server in one command. Run validation separately when using that shortcut.
+
+## Choose preview checks for a change
+
+- For profile or project edits, compare the homepage and the corresponding public Markdown route. Use the [portfolio content guide](docs/portfolio-content.md) to find the data file and any related assets.
+- For MDX edits, review the rendered examples where available and inspect the slug's exported Markdown. Follow the [MDX editing guide](docs/mdx-content.md).
+- For registry edits, build and validate the artifacts, then review the changed item using the [registry guide](docs/component-registry.md).
+- For route or site-origin edits, open the affected resource in the production preview and inspect the response body and links. See the [public route guide](docs/public-exports.md) for local requests.

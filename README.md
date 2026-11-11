@@ -48,17 +48,23 @@ The [development guide](DEVELOPMENT.md) covers toolchain setup and production pr
 - Update social profiles in [`social-links.ts`](src/features/portfolio/data/social-links.ts) and site metadata in [`site.ts`](src/config/site.ts).
 - Replace the published [avatar](public/avatar.jpg) and [résumé](public/resume.pdf) in `public/` when updating those assets.
 
+See the [portfolio content guide](docs/portfolio-content.md) for profile, metadata, and asset updates.
+
 ## Content
 
 The MDX content layer handles documents by category. Component documentation lives in [`src/features/doc/content/components/`](src/features/doc/content/components), and the [document loader](src/features/doc/data/documents.ts) is the entry point for reading those files. The rendered documentation includes syntax-highlighted code blocks.
 
 Machine-readable content is available through `/llms.txt`, `/about.md`, `/projects.md`, `/blog.md`, and `/components.md`. The registry also exposes RSS feeds at `/blocks/rss` and `/components/rss`.
 
+See the [MDX editing guide](docs/mdx-content.md) and the [public route guide](docs/public-exports.md) for authoring and preview checks.
+
 ## Component registry
 
 The [shadcn CLI](https://ui.shadcn.com/docs/cli) registry distributes reusable UI, including components, hooks, and page blocks. Start in [`src/registry/index.ts`](src/registry/index.ts) and follow the category to its item definitions. Preview implementations live in [`src/registry/examples/`](src/registry/examples). Component documentation provides live examples, source snippets, and install commands for pnpm, npm, Yarn, and Bun.
 
 Generate registry assets with `pnpm registry:build`, then validate the generated `public/r/registry.json` with `pnpm registry:validate`. The production build also runs the registry generation step.
+
+The [registry guide](docs/component-registry.md) covers changing and checking individual items.
 
 ## Contributors
 
